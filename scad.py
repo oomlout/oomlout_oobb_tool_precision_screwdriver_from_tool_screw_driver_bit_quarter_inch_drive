@@ -12,10 +12,10 @@ def make_scad(**kwargs):
     # save_type variables
     if True:
         #filter = ""
-        filter = "test"
+        filter = "base"
 
-        #kwargs["save_type"] = "none"
-        kwargs["save_type"] = "all"
+        kwargs["save_type"] = "none"
+        #kwargs["save_type"] = "all"
         
         kwargs["overwrite"] = True
         
@@ -26,9 +26,9 @@ def make_scad(**kwargs):
     # default variables
     if True:
         kwargs["size"] = "oobb"
-        kwargs["width"] = 12
-        kwargs["height"] = 12
-        kwargs["thickness"] = 6
+        kwargs["width"] = 5
+        kwargs["height"] = 5
+        kwargs["thickness"] = 35
 
     # project_variables
     if True:
@@ -78,18 +78,19 @@ def get_base(thing, **kwargs):
     #p3["m"] = "#"
     pos1 = copy.deepcopy(pos)         
     p3["pos"] = pos1
-    oobb_base.append_full(thing,**p3)
-    #add holes
+    #oobb_base.append_full(thing,**p3)
+    
+    
+    #get holder
     p3 = copy.deepcopy(kwargs)
     p3["type"] = "p"
-    p3["shape"] = f"oobb_holes"
-    p3["both_holes"] = True  
-    p3["depth"] = depth
-    p3["holes"] = "perimeter"
-    #p3["m"] = "#"
-    pos1 = copy.deepcopy(pos)         
+    pos1 = copy.deepcopy(pos)
+    #pos1[2] += 20
     p3["pos"] = pos1
-    oobb_base.append_full(thing,**p3)
+    #p3["rot"] = [10,90,45]
+    #p3["m"] = "#"
+    return_value_2 = get_holder_blank(thing, **p3)
+
 
     if prepare_print:
         #put into a rotation object
@@ -115,6 +116,81 @@ def get_base(thing, **kwargs):
     
 ###### utilities
 
+def get_rot(**kwargs):
+    rot = kwargs.get("rot", "")
+    if rot == "":
+        rot_x = kwargs.get('rot_x',0)
+        rot_y = kwargs.get('rot_y',0)
+        rot_z = kwargs.get('rot_z',0)
+        rot = [rot_x, rot_y, rot_z]        
+        kwargs["rot"] = rot
+        kwargs.pop('rot_x', None)
+        kwargs.pop('rot_y', None)
+        kwargs.pop('rot_z', None)
+        kwargs.pop("rot", None)
+
+    return rot
+
+def get_holder_blank(thing, **kwargs):
+
+
+
+    pos = kwargs.get("pos", [0, 0, 0])
+
+    # setting up for rotation object
+    typ = kwargs.get("type", "p")
+    kwargs["type"] = "positive" #needs to be positive for the difference to work
+    rot_original = get_rot(**kwargs)   
+    kwargs.pop("rot", None)
+    kwargs.pop("rot_x", None)
+    kwargs.pop("rot_y", None)
+    kwargs.pop("rot_z", None)
+
+    # storing pos and popping it out to add it in rotation element     
+    pos_original = copy.deepcopy(copy.deepcopy(kwargs.get("pos", [0, 0, 0])))
+    pos_original_original = copy.deepcopy(pos_original)
+    kwargs.pop("pos", None)
+    
+
+    
+    return_value = []
+
+
+    p3 = copy.deepcopy(kwargs)
+    p3["type"] = "p"
+    p3["shape"] = f"polyg"
+    p3["sides"] = 6
+    p3["radius"] = (0.25 * 25.4) / 2  * 1.1546 # 7.32 hopefully
+    p3["height"] = 26
+    p3["depth"] = 4
+    pos1 = copy.deepcopy(pos)
+    p3["pos"] = pos1
+    #p3["m"] = "#"    
+    return_value.append(oobb_base.oobb_easy(**p3))
+
+    p3 = copy.deepcopy(kwargs)
+    p3["type"] = "n"
+    p3["shape"] = f"oring"
+    dep = 0.25 * 25.4
+    p3["depth"] = dep
+    p3["id"] = 5.588 - dep/2
+    pos1 = copy.deepcopy(pos)
+    pos1[2] += 17.745
+    p3["pos"] = pos1
+    #p3["m"] = "#"
+    return_value.append(oobb_base.oobb_easy(**p3))
+
+    # packaging as a rotation object
+    return_value_2 = {}
+    return_value_2["type"]  = "rotation"
+    return_value_2["typetype"]  = typ
+    return_value_2["pos"] = pos_original
+    return_value_2["rot"] = rot_original
+    return_value_2["objects"] = return_value
+    return_value_2 = [return_value_2]
+
+
+    thing["components"].append(return_value_2)
 
 
 def make_scad_generic(part):
