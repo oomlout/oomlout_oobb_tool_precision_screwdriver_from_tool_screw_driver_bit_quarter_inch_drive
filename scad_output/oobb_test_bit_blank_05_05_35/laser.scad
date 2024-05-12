@@ -12,12 +12,16 @@ difference() {
 						}
 					}
 					union() {
-						translate(v = [0, 0, 17.7450000000]) {
+						translate(v = [0, 0, 17]) {
 							rotate_extrude(angle = 360) {
-								translate(v = [5.5880000000, 0, 0]) {
-									circle(r = 3.1750000000);
+								translate(v = [6.3500000000, 0, 0]) {
+									circle(r = 3.9687500000);
 								}
 							}
+						}
+						difference() {
+							cylinder(h = 2, r1 = 10.5000000000, r2 = 11.6750000000);
+							cylinder(h = 2, r1 = 2.5000000000, r2 = 3.6750000000);
 						}
 					}
 				}
