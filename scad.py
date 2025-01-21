@@ -16,8 +16,8 @@ def make_scad(**kwargs):
 
     if typ == "":
         #setup    
-        typ = "all"
-        #typ = "fast"
+        #typ = "all"
+        typ = "fast"
         #typ = "manual"
 
     oomp_mode = "project"
