@@ -2,9 +2,6 @@ import copy
 import opsc
 import oobb
 import oobb_base
-import yaml
-import os
-import scad_help
 
 def main(**kwargs):
     make_scad(**kwargs)
@@ -12,57 +9,27 @@ def main(**kwargs):
 def make_scad(**kwargs):
     parts = []
 
-    typ = kwargs.get("typ", "")
+    # save_type variables
+    if True:
+        #filter = ""
+        filter = "precision_screwdriver_test"
 
-    if typ == "":
-        #setup    
-        typ = "all"
-        #typ = "fast"
-        #typ = "manual"
-
-    oomp_mode = "project"
-    #oomp_mode = "oobb"
-
-    if typ == "all":
-        filter = ""; save_type = "all"; navigation = True; overwrite = True; modes = ["3dpr"]; oomp_run = True
-        #filter = ""; save_type = "all"; navigation = True; overwrite = True; modes = ["3dpr", "laser", "true"]
-    elif typ == "fast":
-        filter = ""; save_type = "none"; navigation = False; overwrite = True; modes = ["3dpr"]; oomp_run = False
-    elif typ == "manual":
-    #filter
-        filter = ""
-        #filter = "test"
-
-    #save_type
-        save_type = "none"
-        #save_type = "all"
+        #kwargs["save_type"] = "none"
+        kwargs["save_type"] = "all"
         
-    #navigation        
-        #navigation = False
-        navigation = True    
+        kwargs["overwrite"] = True
+        
+        kwargs["modes"] = ["3dpr", "laser", "true"]
+        #kwargs["modes"] = ["3dpr"]
+        #kwargs["modes"] = ["laser"]
 
-    #overwrite
-        overwrite = True
-                
-    #modes
-        #modes = ["3dpr", "laser", "true"]
-        modes = ["3dpr"]
-        #modes = ["laser"]    
+    # default variables
+    if True:
+        kwargs["size"] = "oobb"
+        kwargs["width"] = 5
+        kwargs["height"] = 5
+        kwargs["thickness"] = 35
 
-    #oomp_run
-        oomp_run = True
-        #oomp_run = False    
-
-    #adding to kwargs
-    kwargs["filter"] = filter
-    kwargs["save_type"] = save_type
-    kwargs["navigation"] = navigation
-    kwargs["overwrite"] = overwrite
-    kwargs["modes"] = modes
-    kwargs["oomp_mode"] = oomp_mode
-    kwargs["oomp_run"] = oomp_run
-    
-       
     # project_variables
     if True:
         pass
@@ -70,156 +37,67 @@ def make_scad(**kwargs):
     # declare parts
     if True:
 
-        directory_name = os.path.dirname(__file__) 
-        directory_name = directory_name.replace("/", "\\")
-        project_name = directory_name.split("\\")[-1]
-        #max 60 characters
-        length_max = 50
-        if len(project_name) > length_max:
-            project_name = project_name[:length_max]
-
-        #defaults
-        kwargs["size"] = "oobb"
-        kwargs["width"] = 1
-        kwargs["height"] = 1
-        kwargs["thickness"] = 3
-        #oomp_bits
-        if oomp_mode == "project":
-            kwargs["oomp_classification"] = "project"
-            kwargs["oomp_type"] = "github"
-            kwargs["oomp_size"] = "oomlout"
-            kwargs["oomp_color"] = project_name
-            kwargs["oomp_description_main"] = ""
-            kwargs["oomp_description_extra"] = ""
-            kwargs["oomp_manufacturer"] = ""
-            kwargs["oomp_part_number"] = ""
-        elif oomp_mode == "oobb":
-            kwargs["oomp_classification"] = "oobb"
-            kwargs["oomp_type"] = "part"
-            kwargs["oomp_size"] = ""
-            kwargs["oomp_color"] = ""
-            kwargs["oomp_description_main"] = ""
-            kwargs["oomp_description_extra"] = ""
-            kwargs["oomp_manufacturer"] = ""
-            kwargs["oomp_part_number"] = ""
-
         part_default = {} 
-       
-        part_default["project_name"] = project_name
+        part_default["project_name"] = "test" ####### neeeds setting
         part_default["full_shift"] = [0, 0, 0]
         part_default["full_rotations"] = [0, 0, 0]
         
         part = copy.deepcopy(part_default)
         p3 = copy.deepcopy(kwargs)
-        p3["width"] = 1
-        p3["height"] = 1
         #p3["thickness"] = 6
-        p3["extra"] = "hex_head_2_5_mm"
         part["kwargs"] = p3
-        nam = "precision_screwdriver"
-        part["name"] = nam
-        if oomp_mode == "oobb":
-            p3["oomp_size"] = nam
+        part["name"] = "bit_blank"
         parts.append(part)
 
-
-    kwargs["parts"] = parts
-
-    scad_help.make_parts(**kwargs)
-
-    #generate navigation
-    if navigation:
-        sort = []
-        
-        sort.append("name")
-        sort.append("extra")
-        #sort.append("width")
-        #sort.append("height")
-        #sort.append("thickness")
-        
-        scad_help.generate_navigation(sort = sort)
-
-
-def get_base(thing, **kwargs):
-
-    prepare_print = kwargs.get("prepare_print", False)
-    width = kwargs.get("width", 1)
-    height = kwargs.get("height", 1)
-    depth = kwargs.get("thickness", 3)                    
-    rot = kwargs.get("rot", [0, 0, 0])
-    pos = kwargs.get("pos", [0, 0, 0])
-    extra = kwargs.get("extra", "")
-    
-    #add plate
-    p3 = copy.deepcopy(kwargs)
-    p3["type"] = "positive"
-    p3["shape"] = f"oobb_plate"    
-    p3["depth"] = depth
-    #p3["holes"] = True         uncomment to include default holes
-    #p3["m"] = "#"
-    pos1 = copy.deepcopy(pos)         
-    p3["pos"] = pos1
-    oobb_base.append_full(thing,**p3)
-    
-    #add holes seperate
-    p3 = copy.deepcopy(kwargs)
-    p3["type"] = "p"
-    p3["shape"] = f"oobb_holes"
-    p3["both_holes"] = True  
-    p3["depth"] = depth
-    p3["holes"] = "perimeter"
-    #p3["m"] = "#"
-    pos1 = copy.deepcopy(pos)         
-    p3["pos"] = pos1
-    oobb_base.append_full(thing,**p3)
-
-    if prepare_print:
-        #put into a rotation object
-        components_second = copy.deepcopy(thing["components"])
-        return_value_2 = {}
-        return_value_2["type"]  = "rotation"
-        return_value_2["typetype"]  = "p"
-        pos1 = copy.deepcopy(pos)
-        pos1[0] += 50
-        return_value_2["pos"] = pos1
-        return_value_2["rot"] = [180,0,0]
-        return_value_2["objects"] = components_second
-        
-        thing["components"].append(return_value_2)
-
-    
-        #add slice # top
+        part = copy.deepcopy(part_default)
         p3 = copy.deepcopy(kwargs)
-        p3["type"] = "n"
-        p3["shape"] = f"oobb_slice"
-        pos1 = copy.deepcopy(pos)
-        pos1[0] += -500/2
-        pos1[1] += 0
-        pos1[2] += -500/2        
-        p3["pos"] = pos1
-        #p3["m"] = "#"
-        oobb_base.append_full(thing,**p3)
+        #p3["thickness"] = 6
+        part["kwargs"] = p3
+        part["name"] = "bit_holder_test"
+        parts.append(part)
 
-def get_precision_screwdriver(thing, **kwargs):
+        
+        part = copy.deepcopy(part_default)
+        p3 = copy.deepcopy(kwargs)
+        #p3["thickness"] = 6
+        part["kwargs"] = p3
+        part["name"] = "precision_screwdriver_test"
+        parts.append(part)
+        
+    #make the parts
+    if True:
+        for part in parts:
+            name = part.get("name", "default")
+            if filter in name:
+                print(f"making {part['name']}")
+                make_scad_generic(part)            
+                print(f"done {part['name']}")
+            else:
+                print(f"skipping {part['name']}")
+
+def get_precision_screwdriver_test(thing, **kwargs):
     depth = kwargs.get("thickness", 4)
-    prepare_print = kwargs.get("prepare_print", False)
+    prepare_print = kwargs.get("prepare_print", True)
 
     pos = kwargs.get("pos", [0, 0, 0])
     #pos = copy.deepcopy(pos)
     #pos[2] += -20
 
-    radius_big = 10
-    radius_little = 4
-    height_driver = 30
-    depth_taper = 12
+    radius_big = 12
+    height_driver = 40
+
     #hex holder bottom
-    
     p3 = copy.deepcopy(kwargs)
-    p3["type"] = "p"    
+    p3["type"] = "p"
+    #p3["shape"] = f"polyg"  
+    #p3["sides"] = 6
+    #p3["height"] = height_driver        
+    #p3["radius"] = 6
+    depth_taper = 12
     p3["depth"] = depth_taper
     p3["shape"] = f"oobb_cylinder"  
     p3["r2"] = radius_big
-    p3["r1"] = radius_little
+    p3["r1"] = 4
     p3["zz"] = "bottom"
     p3["rot"] = [0,0,0]
     #p3["m"] = "#"
@@ -245,20 +123,45 @@ def get_precision_screwdriver(thing, **kwargs):
 
 
 
-    
+    #add coinnecting screws
+    if False:
+        shift_screw = 35
+        offset_screw  = 15
+        
+        p3 = copy.deepcopy(kwargs)
+        p3["type"] = "n"
+        p3["shape"] = f"oobb_screw_countersunk"
+        depth_screw = 12
+        p3["depth"] = depth_screw
+        p3["radius_name"] = "m3"
+        p3["include_nut"] = True    
+        pos1 = copy.deepcopy(pos)        
+        pos1[0] += shift_screw
+        pos1[2] += depth_screw/2
+        p3["pos"] = pos1
+        p3["m"] = "#"
+        p3["clearance"] = ["top", "bottom"]
+        oobb_base.append_full(thing,**p3)
+
+        p3 = copy.deepcopy(p3)
+        pos1 = copy.deepcopy(p3["pos"])
+        pos1[0] += offset_screw
+        pos1[2] += -depth_screw
+        p3["pos"] = pos1
+        p3["m"] = "#"
+        p3["rot"] = [0,180,0]
+        oobb_base.append_full(thing,**p3)
 
     
     #get holder
     p3 = copy.deepcopy(kwargs)
     p3["type"] = "n"
-    #p3["type"] = "p"
     pos1 = copy.deepcopy(pos)
     p3["pos"] = pos1
 
     p3["rot"] = [0,0,0]
     p3["m"] = "#"    
     p3["clearance"] = 0.1
-    p3["clearance_top"] = True
     return_value_2 = get_holder_blank(thing, **p3)
 
 
@@ -288,10 +191,168 @@ def get_precision_screwdriver(thing, **kwargs):
         oobb_base.append_full(thing,**p3)
 
 
+def get_bit_holder_test(thing, **kwargs):
+    depth = kwargs.get("thickness", 4)
+    prepare_print = kwargs.get("prepare_print", True)
+
+    pos = kwargs.get("pos", [0, 0, 0])
+    #pos = copy.deepcopy(pos)
+    #pos[2] += -20
+
+    #add plate
+    p3 = copy.deepcopy(kwargs)
+    p3["type"] = "p"
+    p3["shape"] = f"rounded_rectangle"    
+    dep = 10
+    width = 35
+    height = 25
+    depth = dep
+    size = [width, height, depth]
+    p3["size"] = size
+    #p3["m"] = "#"
+    pos1 = copy.deepcopy(pos)         
+    pos1[0] += width/2 - 2
+    pos1[2] += -dep/2
+    p3["pos"] = pos1
+    oobb_base.append_full(thing,**p3)
+    
+    #add coinnecting screws
+    p3 = copy.deepcopy(kwargs)
+    p3["type"] = "n"
+    p3["shape"] = f"oobb_screw_countersunk"
+    p3["depth"] = dep
+    p3["radius_name"] = "m3"
+    p3["include_nut"] = True    
+    pos1 = copy.deepcopy(pos)
+    shift_screw = 15/2
+    pos1[0] += width/2 - 2
+    pos1[1] += shift_screw
+    pos1[2] += dep/2
+    p3["pos"] = pos1
+    p3["m"] = "#"
+    oobb_base.append_full(thing,**p3)
+
+    p3 = copy.deepcopy(p3)
+    pos1 = copy.deepcopy(p3["pos"])
+    #pos1[1] += shift_screw
+    pos1[2] += -dep
+    pos1[1] += -shift_screw * 2
+    p3["pos"] = pos1
+    p3["m"] = "#"
+    p3["rot"] = [0,180,0]
+    oobb_base.append_full(thing,**p3)
+
+    
+    #get holder
+    p3 = copy.deepcopy(kwargs)
+    p3["type"] = "n"
+    pos1 = copy.deepcopy(pos)
+    p3["pos"] = pos1
+
+    p3["rot"] = [0,90,0]
+    p3["m"] = "#"    
+    p3["clearance"] = 0.5
+    return_value_2 = get_holder_blank(thing, **p3)
+
+
+    if prepare_print:
+        #put into a rotation object
+        components_second = copy.deepcopy(thing["components"])
+        return_value_2 = {}
+        return_value_2["type"]  = "rotation"
+        return_value_2["typetype"]  = "p"
+        pos1 = copy.deepcopy(pos)
+        pos1[0] += 50
+        return_value_2["pos"] = pos1
+        return_value_2["rot"] = [180,0,0]
+        return_value_2["objects"] = components_second
+        
+        #thing["components"].append(return_value_2)
+
+    
+        #add slice # top
+        p3 = copy.deepcopy(kwargs)
+        p3["type"] = "n"
+        p3["shape"] = f"oobb_slice"
+        #p3["m"] = "#"
+        oobb_base.append_full(thing,**p3)
+
+
+def get_bit_blank(thing, **kwargs):
+
+    depth = kwargs.get("thickness", 4)
+    prepare_print = kwargs.get("prepare_print", False)
+    
+
+    pos = kwargs.get("pos", [0, 0, 0])
+    #pos = copy.deepcopy(pos)
+    #pos[2] += -20
+
+    #add plate
+    p3 = copy.deepcopy(kwargs)
+    p3["type"] = "p"
+    p3["shape"] = f"oobb_plate"    
+    p3["depth"] = depth
+    #p3["m"] = "#"
+    pos1 = copy.deepcopy(pos)         
+    p3["pos"] = pos1
+    #oobb_base.append_full(thing,**p3)
+    
+    
+    #get holder
+    p3 = copy.deepcopy(kwargs)
+    p3["type"] = "p"
+    pos1 = copy.deepcopy(pos)
+    #pos1[2] += 20
+    p3["pos"] = pos1
+    #p3["rot"] = [10,90,45]
+    #p3["m"] = "#"
+    p3["include_bit"] = False
+    return_value_2 = get_holder_blank(thing, **p3)
+
+
+    if prepare_print:
+        #put into a rotation object
+        components_second = copy.deepcopy(thing["components"])
+        return_value_2 = {}
+        return_value_2["type"]  = "rotation"
+        return_value_2["typetype"]  = "p"
+        pos1 = copy.deepcopy(pos)
+        pos1[0] += 50
+        return_value_2["pos"] = pos1
+        return_value_2["rot"] = [180,0,0]
+        return_value_2["objects"] = components_second
+        
+        thing["components"].append(return_value_2)
+
+    
+        #add slice # top
+        p3 = copy.deepcopy(kwargs)
+        p3["type"] = "n"
+        p3["shape"] = f"oobb_slice"
+        #p3["m"] = "#"
+        oobb_base.append_full(thing,**p3)
+    
+###### utilities
+
+def get_rot(**kwargs):
+    rot = kwargs.get("rot", "")
+    if rot == "":
+        rot_x = kwargs.get('rot_x',0)
+        rot_y = kwargs.get('rot_y',0)
+        rot_z = kwargs.get('rot_z',0)
+        rot = [rot_x, rot_y, rot_z]        
+        kwargs["rot"] = rot
+        kwargs.pop('rot_x', None)
+        kwargs.pop('rot_y', None)
+        kwargs.pop('rot_z', None)
+        kwargs.pop("rot", None)
+
+    return rot
+
 def get_holder_blank(thing, **kwargs):
     clearance = kwargs.get("clearance", 0)
     include_bit = kwargs.get("include_bit", True)
-    clearance_top = kwargs.get("clearance_top", False)
 
     pos = kwargs.get("pos", [0, 0, 0])
 
@@ -321,14 +382,9 @@ def get_holder_blank(thing, **kwargs):
         p3["shape"] = f"polyg"
         p3["sides"] = 6
         p3["radius"] = (0.25 * 25.4) / 2  * 1.1546 + clearance# 7.32 hopefully 
-        height_total = 28 + clearance 
-        height_total_local = height_total       
-        if clearance_top:
-            height_total_local += 200
-        else:
-            height_total_local = height_total
-        p3["height"] = height_total_local
-        #p3["depth"] = 4
+        height_total = 28
+        p3["height"] = height_total + clearance
+        p3["depth"] = 4
         pos1 = copy.deepcopy(pos)
         pos1[0] += clearance /2
         p3["pos"] = pos1
@@ -370,7 +426,7 @@ def get_holder_blank(thing, **kwargs):
             #p3["m"] = "#"
             return_value.append(oobb_base.oobb_easy(**p3))
     #joining screws
-    if False:
+    if True:
         shift_screw = 17
         offset_screw  = 5 
         depth_screw = 12
@@ -455,20 +511,41 @@ def get_holder_blank(thing, **kwargs):
 
     thing["components"].append(return_value_2)
 
-def get_rot(**kwargs):
-    rot = kwargs.get("rot", "")
-    if rot == "":
-        rot_x = kwargs.get('rot_x',0)
-        rot_y = kwargs.get('rot_y',0)
-        rot_z = kwargs.get('rot_z',0)
-        rot = [rot_x, rot_y, rot_z]        
-        kwargs["rot"] = rot
-        kwargs.pop('rot_x', None)
-        kwargs.pop('rot_y', None)
-        kwargs.pop('rot_z', None)
-        kwargs.pop("rot", None)
 
-    return rot
+def make_scad_generic(part):
+    
+    # fetching variables
+    name = part.get("name", "default")
+    project_name = part.get("project_name", "default")
+    
+    kwargs = part.get("kwargs", {})    
+    
+    modes = kwargs.get("modes", ["3dpr", "laser", "true"])
+    save_type = kwargs.get("save_type", "all")
+    overwrite = kwargs.get("overwrite", True)
+
+    kwargs["type"] = f"{project_name}_{name}"
+
+    thing = oobb_base.get_default_thing(**kwargs)
+    kwargs.pop("size","")
+
+    #get the part from the function get_{name}"
+    func = globals()[f"get_{name}"]
+    func(thing, **kwargs)
+
+    for mode in modes:
+        depth = thing.get(
+            "depth_mm", thing.get("thickness_mm", 3))
+        height = thing.get("height_mm", 100)
+        layers = depth / 3
+        tilediff = height + 10
+        start = 1.5
+        if layers != 1:
+            start = 1.5 - (layers / 2)*3
+        if "bunting" in thing:
+            start = 0.5
+        opsc.opsc_make_object(f'scad_output/{thing["id"]}/{mode}.scad', thing["components"], mode=mode, save_type=save_type, overwrite=overwrite, layers=layers, tilediff=tilediff, start=start)    
+
 
 if __name__ == '__main__':
     kwargs = {}
