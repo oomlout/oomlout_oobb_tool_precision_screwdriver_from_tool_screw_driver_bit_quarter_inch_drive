@@ -31,7 +31,6 @@ kwargs:
   oomp_type: github
   overwrite: true
   thickness: 3
-  typ: all
   type: oomlout_oobb_tool_precision_screwdriver_from_tool__precision_screwdriver
   width: 1
 manufacturer: ''
@@ -43,9 +42,9 @@ thing:
   classification: oobb
   color: ''
   components:
-  - - depth: 12
+  - - depth: 20
       extra: hex_head_2_5_mm
-      h: 12
+      h: 20
       height: 1
       inclusion: laser
       pos: &id001
@@ -53,7 +52,7 @@ thing:
       - 0
       - 0.0
       r1: 4
-      r2: 10
+      r2: 6.0
       rot: &id002
       - 0
       - 0
@@ -61,41 +60,41 @@ thing:
       shape: cylinder
       type: positive
       width: 1
-    - depth: 12
+    - depth: 20
       extra: hex_head_2_5_mm
-      h: 12
+      h: 20
       height: 1
       inclusion: 3dpr
       pos: *id001
       r1: 4
-      r2: 10
+      r2: 6.0
       rot: *id002
       shape: cylinder
       type: positive
       width: 1
-    - depth: 12
+    - depth: 20
       extra: hex_head_2_5_mm
-      h: 12
+      h: 20
       height: 1
       inclusion: 'true'
       pos: *id001
       r1: 4
-      r2: 10
+      r2: 6.0
       rot: *id002
       shape: cylinder
       type: positive
       width: 1
-  - - depth: 20
+  - - depth: 40
       extra: hex_head_2_5_mm
-      h: 20
+      h: 40
       height: 1
       inclusion: laser
       pos: &id003
       - 0
       - 0
-      - 12.0
-      r: 10
-      radius: 10
+      - 20.0
+      r: 6.0
+      radius: 6.0
       rot: &id004
       - 0
       - 0
@@ -103,58 +102,58 @@ thing:
       shape: cylinder
       type: positive
       width: 1
-    - depth: 20
+    - depth: 40
       extra: hex_head_2_5_mm
-      h: 20
+      h: 40
       height: 1
       inclusion: 3dpr
       pos: *id003
-      r: 10
+      r: 6.0
       rot: *id004
       shape: cylinder
       type: positive
       width: 1
-    - depth: 20
+    - depth: 40
       extra: hex_head_2_5_mm
-      h: 20
+      h: 40
       height: 1
       inclusion: 'true'
       pos: *id003
-      r: 10
-      radius: 10
+      r: 6.0
+      radius: 6.0
       rot: *id004
       shape: cylinder
       type: positive
       width: 1
   - - objects:
-      - - - clearance: 0.1
+      - - - clearance: 0.2
             extra: hex_head_2_5_mm
-            height: 228.1
+            height: 228.2
             m: '#'
             pos:
-            - 0.05
+            - 0.1
             - 0
-            - 0
-            r: 3.765855
+            - 10
+            r: 3.8658550000000003
             shape: polyg
             sides: 6
             type: positive
             width: 1
-      - - - clearance: 0.1
+      - - - clearance: 0.2
             extra: hex_head_2_5_mm
             height: 2
             m: '#'
             pos:
             - 0
             - 0
-            - 0
-            r1: 2.55
-            r2: 3.7249999999999996
+            - 10
+            r1: 2.6
+            r2: 3.775
             shape: tube_new
             type: negative
             wall_thickness: 8
             width: 1
-      - - - clearance: 0.1
+      - - - clearance: 0.2
             depth: 100
             extra: hex_head_2_5_mm
             h: 100
@@ -164,13 +163,13 @@ thing:
             pos: &id005
             - 0
             - 0
-            - -71.9
-            r: 2.55
-            radius: 2.55
+            - -61.8
+            r: 2.6
+            radius: 2.6
             shape: cylinder
             type: positive
             width: 1
-          - clearance: 0.1
+          - clearance: 0.2
             depth: 100
             extra: hex_head_2_5_mm
             h: 100
@@ -178,11 +177,11 @@ thing:
             inclusion: 3dpr
             m: '#'
             pos: *id005
-            r: 2.55
+            r: 2.6
             shape: cylinder
             type: positive
             width: 1
-          - clearance: 0.1
+          - clearance: 0.2
             depth: 100
             extra: hex_head_2_5_mm
             h: 100
@@ -190,15 +189,15 @@ thing:
             inclusion: 'true'
             m: '#'
             pos: *id005
-            r: 2.55
-            radius: 2.55
+            r: 2.6
+            radius: 2.6
             shape: cylinder
             type: positive
             width: 1
       pos:
       - 0
       - 0
-      - 0
+      - 10
       rot:
       - 0
       - 0
@@ -206,7 +205,7 @@ thing:
       type: rotation
       typetype: n
   components_objects:
-  - depth: 12
+  - depth: 20
     extra: hex_head_2_5_mm
     filter: ''
     height: 1
@@ -229,7 +228,7 @@ thing:
     - 0
     - 0
     r1: 4
-    r2: 10
+    r2: 6.0
     rot:
     - 0
     - 0
@@ -237,11 +236,10 @@ thing:
     save_type: all
     shape: oobb_cylinder
     thickness: 3
-    typ: all
     type: p
     width: 1
     zz: bottom
-  - depth: 20
+  - depth: 40
     extra: hex_head_2_5_mm
     filter: ''
     height: 1
@@ -262,8 +260,8 @@ thing:
     pos:
     - 0
     - 0
-    - 12
-    radius: 10
+    - 20
+    radius: 6.0
     rot:
     - 0
     - 0
@@ -271,13 +269,12 @@ thing:
     save_type: all
     shape: oobb_cylinder
     thickness: 3
-    typ: all
     type: p
     width: 1
     zz: bottom
   components_string:
-  - oobb_cylinder_shape_p_type_12_depth_all_typ_all_save_type_true_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_true_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_from_tool__oomp_color_hex_head_2_5_mm_extra_10_r2_4_r1_bottom_zz_0_0_0_rot
-  - oobb_cylinder_shape_p_type_20_depth_0_0_12_pos_all_typ_all_save_type_true_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_true_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_from_tool__oomp_color_hex_head_2_5_mm_extra_10_radius_0_0_0_rot_bottom_zz
+  - oobb_cylinder_shape_p_type_20_depth_all_save_type_true_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_true_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_from_tool__oomp_color_hex_head_2_5_mm_extra_6.0_r2_4_r1_bottom_zz_0_0_0_rot
+  - oobb_cylinder_shape_p_type_40_depth_0_0_20_pos_all_save_type_true_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_true_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_from_tool__oomp_color_hex_head_2_5_mm_extra_6.0_radius_0_0_0_rot_bottom_zz
   description: oomlout oobb tool precision screwdriver from tool  precision screwdriver
     1x1x3
   description_extra: hex_head_2_5_mm_extra

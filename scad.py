@@ -109,18 +109,23 @@ def make_scad(**kwargs):
         part_default["full_shift"] = [0, 0, 0]
         part_default["full_rotations"] = [0, 0, 0]
         
-        part = copy.deepcopy(part_default)
-        p3 = copy.deepcopy(kwargs)
-        p3["width"] = 1
-        p3["height"] = 1
-        #p3["thickness"] = 6
-        p3["extra"] = "hex_head_2_5_mm"
-        part["kwargs"] = p3
-        nam = "precision_screwdriver"
-        part["name"] = nam
-        if oomp_mode == "oobb":
-            p3["oomp_size"] = nam
-        parts.append(part)
+        names = []
+        names.append("precision_screwdriver")
+        names.append("precision_screwdriver_test")
+
+        for name in names:
+            part = copy.deepcopy(part_default)
+            p3 = copy.deepcopy(kwargs)
+            p3["width"] = 1
+            p3["height"] = 1
+            #p3["thickness"] = 6
+            p3["extra"] = "hex_head_2_5_mm"
+            part["kwargs"] = p3
+            nam = name
+            part["name"] = nam
+            if oomp_mode == "oobb":
+                p3["oomp_size"] = nam
+            parts.append(part)
 
 
     kwargs["parts"] = parts
@@ -200,7 +205,7 @@ def get_base(thing, **kwargs):
         #p3["m"] = "#"
         oobb_base.append_full(thing,**p3)
 
-def get_precision_screwdriver(thing, **kwargs):
+def get_precision_screwdriver_test(thing, **kwargs):
     depth = kwargs.get("thickness", 4)
     prepare_print = kwargs.get("prepare_print", False)
 
@@ -257,7 +262,7 @@ def get_precision_screwdriver(thing, **kwargs):
 
     p3["rot"] = [0,0,0]
     p3["m"] = "#"    
-    p3["clearance"] = 0.1
+    p3["clearance"] = 0.2
     p3["clearance_top"] = True
     return_value_2 = get_holder_blank(thing, **p3)
 
@@ -287,6 +292,94 @@ def get_precision_screwdriver(thing, **kwargs):
         #p3["m"] = "#"
         oobb_base.append_full(thing,**p3)
 
+def get_precision_screwdriver(thing, **kwargs):
+    depth = kwargs.get("thickness", 4)
+    prepare_print = kwargs.get("prepare_print", False)
+
+    pos = kwargs.get("pos", [0, 0, 0])
+    #pos = copy.deepcopy(pos)
+    #pos[2] += -20
+
+    radius_big = 12/2
+    radius_little = 4
+    height_driver = 50
+    depth_taper = 20
+    lift_bit = 10
+    #hex holder bottom
+    
+    p3 = copy.deepcopy(kwargs)
+    p3["type"] = "p"    
+    p3["depth"] = depth_taper
+    p3["shape"] = f"oobb_cylinder"  
+    p3["r2"] = radius_big
+    p3["r1"] = radius_little
+    p3["zz"] = "bottom"
+    p3["rot"] = [0,0,0]
+    #p3["m"] = "#"
+    pos1 = copy.deepcopy(pos)         
+    p3["pos"] = pos1
+    oobb_base.append_full(thing,**p3)
+    
+    #add cylinder top
+    hex_offset = 10
+    p3 = copy.deepcopy(kwargs)
+    p3["type"] = "p"
+    p3["shape"] = f"oobb_cylinder"
+    dep = height_driver - hex_offset
+    p3["depth"] = dep
+    p3["radius"] = radius_big
+    pos1 = copy.deepcopy(pos)
+    pos1[2] += depth_taper
+    p3["pos"] = pos1
+    p3["rot"] = [0,0,0]
+    p3["zz"] = "bottom"
+    #p3["m"] = "#"
+    oobb_base.append_full(thing,**p3)
+
+
+
+    
+
+    
+    #get holder
+    p3 = copy.deepcopy(kwargs)
+    p3["type"] = "n"
+    #p3["type"] = "p"
+    pos1 = copy.deepcopy(pos)
+    pos1[2] += lift_bit
+    p3["pos"] = pos1
+
+    p3["rot"] = [0,0,0]
+    p3["m"] = "#"    
+    p3["clearance"] = 0.2
+    p3["clearance_top"] = True
+    return_value_2 = get_holder_blank(thing, **p3)
+
+
+    if prepare_print:
+        #put into a rotation object
+        components_second = copy.deepcopy(thing["components"])
+        return_value_2 = {}
+        return_value_2["type"]  = "rotation"
+        return_value_2["typetype"]  = "p"
+        pos1 = copy.deepcopy(pos)
+        pos1[0] += 50
+        return_value_2["pos"] = pos1
+        return_value_2["rot"] = [0,0,180]
+        return_value_2["objects"] = components_second
+        
+        thing["components"].append(return_value_2)
+
+    
+        #add slice # left
+        p3 = copy.deepcopy(kwargs)
+        p3["type"] = "n"
+        p3["shape"] = f"oobb_slice"
+        pos1 = copy.deepcopy(pos)
+        pos1[0] += -250
+        p3["pos"] = pos1
+        #p3["m"] = "#"
+        oobb_base.append_full(thing,**p3)
 
 def get_holder_blank(thing, **kwargs):
     clearance = kwargs.get("clearance", 0)
