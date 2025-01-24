@@ -303,61 +303,127 @@ def get_precision_screwdriver(thing, **kwargs):
     #pos = copy.deepcopy(pos)
     #pos[2] += -20
 
-    radius_big = 12/2
-    radius_little = 4
-    height_driver = 50
-    depth_taper = 20
+    #technical
     lift_bit = 10
-    #hex holder bottom
-    
-    p3 = copy.deepcopy(kwargs)
-    p3["type"] = "p"    
-    p3["depth"] = depth_taper
-    p3["shape"] = f"oobb_cylinder"  
-    p3["r2"] = radius_big
-    p3["r1"] = radius_little
-    p3["zz"] = "bottom"
-    p3["rot"] = [0,0,0]
-    #p3["m"] = "#"
-    pos1 = copy.deepcopy(pos)         
-    p3["pos"] = pos1
-    oobb_base.append_full(thing,**p3)
-    
-    #add cylinder top
-    hex_offset = 10
-    p3 = copy.deepcopy(kwargs)
-    p3["type"] = "p"
-    p3["shape"] = f"oobb_cylinder"
-    dep = height_driver - hex_offset
-    p3["depth"] = dep
-    p3["radius"] = radius_big
-    pos1 = copy.deepcopy(pos)
-    pos1[2] += depth_taper
-    p3["pos"] = pos1
-    p3["rot"] = [0,0,0]
-    p3["zz"] = "bottom"
-    #p3["m"] = "#"
-    oobb_base.append_full(thing,**p3)
+    radius_little = 3.5/2
+    radius_bit_main = 3.5/2
 
-
-
+    #main
+    radius_big = 10/2
     
-
+    height_driver = 40
+    #taper
+    depth_taper = 5    
+    #hex
+    hex_side_ratio = 1.1547
+    radius_bottom_hex = 10/2 * hex_side_ratio
+    depth_bottom_hex = 6
     
+    #bottom taper piece
+    if True:
+        p3 = copy.deepcopy(kwargs)
+        p3["type"] = "p"    
+        p3["depth"] = depth_taper
+        p3["shape"] = f"oobb_cylinder"  
+        p3["r2"] = radius_big
+        p3["r1"] = radius_little
+        p3["zz"] = "bottom"
+        p3["rot"] = [0,0,0]
+        #p3["m"] = "#"
+        pos1 = copy.deepcopy(pos)         
+        p3["pos"] = pos1
+        oobb_base.append_full(thing,**p3)
+    
+    #main_cylinder
+    if True:    
+    #if False:    
+        hex_offset = 10
+        p3 = copy.deepcopy(kwargs)
+        p3["type"] = "p"
+        p3["shape"] = f"oobb_cylinder"
+        dep = height_driver - hex_offset
+        p3["depth"] = dep
+        p3["radius"] = radius_big
+        pos1 = copy.deepcopy(pos)
+        pos1[2] += depth_taper
+        p3["pos"] = pos1
+        p3["rot"] = [0,0,0]
+        p3["zz"] = "bottom"
+        #p3["m"] = "#"
+        oobb_base.append_full(thing,**p3)
+    
+    #hex_bottom
+    if True:
+        p3 = copy.deepcopy(kwargs)
+        p3["type"] = "p"
+        p3["shape"] = f"polyg"
+        p3["sides"] = 6
+        p3["height"] = depth_bottom_hex
+        p3["radius"] = radius_bottom_hex
+        pos1 = copy.deepcopy(pos)
+        pos1[2] += depth_taper
+        p3["pos"] = pos1        
+        #p3["m"] = "#"
+        oobb_base.append_full(thing,**p3)
+
     #get holder
-    p3 = copy.deepcopy(kwargs)
-    p3["type"] = "n"
-    #p3["type"] = "p"
-    pos1 = copy.deepcopy(pos)
-    pos1[2] += lift_bit
-    p3["pos"] = pos1
+    if True:
+        p3 = copy.deepcopy(kwargs)
+        p3["type"] = "n"
+        #p3["type"] = "p"
+        pos1 = copy.deepcopy(pos)
+        pos1[2] += lift_bit
+        p3["pos"] = pos1
 
-    p3["rot"] = [0,0,0]
-    p3["m"] = "#"    
-    p3["clearance"] = 0.2
-    p3["clearance_top"] = True
-    return_value_2 = get_holder_blank(thing, **p3)
+        p3["rot"] = [0,0,0]
+        p3["m"] = "#"    
+        p3["clearance"] = 0.2
+        p3["clearance_top"] = True
+        p3["radius_bit_main"] = radius_bit_main
+        return_value_2 = get_holder_blank(thing, **p3)
 
+    #add lock nut
+    if True:
+        nut_wall_thickness = 2
+        p3 = copy.deepcopy(kwargs)
+        p3["type"] = "n"
+        p3["shape"] = f"oobb_nut"
+        p3["depth"] = radius_big - nut_wall_thickness
+        p3["radius_name"] = "m3"
+        #p3["hole"] = True    
+        pos1 = copy.deepcopy(pos)        
+        pos1[0] += 0
+        pos1[1] += 0
+        pos1[2] += lift_bit + 12
+        poss = []
+        repeats = 6        
+        shift_down = 0
+        for i in range(repeats):            
+            pos11 = copy.deepcopy(pos1)
+            shift_down = -i * 2.75
+            pos11[2] += shift_down
+            poss.append(pos11)
+        p3["pos"] = poss
+        rot = [90,360/12,0]
+        p3["rot"] = rot
+        p3["m"] = "#"        
+        oobb_base.append_full(thing,**p3)
+        #add cylinder clearance
+        p3 = copy.deepcopy(kwargs)
+        p3["type"] = "n"
+        p3["shape"] = f"oobb_hole"
+        dep = 12
+        p3["depth"] = dep
+        p3["radius_name"] = "m3"
+        p3["include_nut"] = True
+        p3["clearance"] = ["top", "bottom"]
+        pos12 = copy.deepcopy(pos1)
+        pos12[2] += shift_down
+        p3["pos"] = pos12
+        rot = [90,0,0]
+        p3["rot"] = rot
+        p3["m"] = "#"
+        oobb_base.append_full(thing,**p3)
 
     if prepare_print:
         #put into a rotation object
@@ -478,7 +544,7 @@ def get_holder_blank(thing, **kwargs):
     clearance = kwargs.get("clearance", 0)
     include_bit = kwargs.get("include_bit", True)
     clearance_top = kwargs.get("clearance_top", False)
-
+    radius_bit_main = kwargs.get("radius_bit_main", 3.5/2)
     pos = kwargs.get("pos", [0, 0, 0])
 
     # setting up for rotation object
@@ -606,7 +672,7 @@ def get_holder_blank(thing, **kwargs):
         p3["height"] = 2
         p3["r2"]= 7.35/2 + clearance/2
         #p3["r1"]= 3.5/2
-        p3["r1"]= 5/2 + clearance/2
+        p3["r1"]= radius_bit_main + clearance/2
         p3["wall_thickness"] = 8
         pos1 = copy.deepcopy(pos)        
         p3["pos"] = pos1
@@ -621,7 +687,7 @@ def get_holder_blank(thing, **kwargs):
         dep = 100
         p3["depth"] = dep
         
-        p3["radius"] = 5 / 2 + clearance / 2
+        p3["radius"] = radius_bit_main + clearance / 2
         pos1 = copy.deepcopy(pos)         
         pos1[2] += -dep/2 + height_total
         p3["pos"] = pos1

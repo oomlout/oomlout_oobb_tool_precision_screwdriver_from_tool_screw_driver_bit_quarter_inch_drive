@@ -148,7 +148,7 @@ thing:
             - 0
             - 0
             - 0
-            r1: 2.6
+            r1: 1.85
             r2: 3.775
             shape: tube_new
             type: negative
@@ -165,8 +165,8 @@ thing:
             - 0
             - 0
             - -71.8
-            r: 2.6
-            radius: 2.6
+            r: 1.85
+            radius: 1.85
             shape: cylinder
             type: positive
             width: 1
@@ -178,7 +178,7 @@ thing:
             inclusion: 3dpr
             m: '#'
             pos: *id005
-            r: 2.6
+            r: 1.85
             shape: cylinder
             type: positive
             width: 1
@@ -190,8 +190,8 @@ thing:
             inclusion: 'true'
             m: '#'
             pos: *id005
-            r: 2.6
-            radius: 2.6
+            r: 1.85
+            radius: 1.85
             shape: cylinder
             type: positive
             width: 1

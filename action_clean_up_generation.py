@@ -3,7 +3,7 @@ import glob
 
 def main(**kwargs):
     directories_to_delete = []
-    directories_to_delete.append("temporary")
+    #directories_to_delete.append("temporary")
     directories_to_delete.append("scad_output")
     directories_to_delete.append("parts")
     directories_to_delete.append("data")
