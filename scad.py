@@ -316,7 +316,7 @@ def get_precision_screwdriver(thing, **kwargs):
     radius_bottom_hex_small = 10/2 * hex_side_ratio
     radius_bottom_hex_big = 13/2 * hex_side_ratio
     depth_bottom_hex_small = 3
-    depth_bottom_hex_big = 6
+    depth_bottom_hex_big = 9
     
     #technical
     bottom_of_shaft = depth_taper + depth_bottom_hex_big + depth_bottom_hex_small
@@ -329,17 +329,17 @@ def get_precision_screwdriver(thing, **kwargs):
     #donut cutouts
     orings = []
     oring = {}
-    oring["id"] = 10/2
+    oring["id"] = 11/2
     dep = 80
     oring["depth"] = dep    
     pos1 = copy.deepcopy(pos)
-    pos1[2] += bottom_of_shaft + 10.7
+    pos1[2] += bottom_of_shaft + 9
     oring["pos"] = pos1
     orings.append(oring)
 
     oring = copy.deepcopy(oring)
     pos1 = copy.deepcopy(pos)
-    pos1[2] += bottom_of_shaft - 17
+    pos1[2] += bottom_of_shaft - 18
     oring["pos"] = pos1
     orings.append(oring)
 
@@ -428,7 +428,7 @@ def get_precision_screwdriver(thing, **kwargs):
 
     #add lock nut
     if True:
-        nut_wall_thickness = 1
+        nut_wall_thickness = 1.75
         p3 = copy.deepcopy(kwargs)
         p3["type"] = "n"
         p3["shape"] = f"oobb_nut"
@@ -438,16 +438,16 @@ def get_precision_screwdriver(thing, **kwargs):
         pos1 = copy.deepcopy(pos)        
         pos1[0] += 0
         pos1[1] += 0
-        pos1[2] += lift_bit - depth_bottom_hex_big/2
+        pos1[2] += depth_taper + depth_bottom_hex_small + depth_bottom_hex_big / 2
         poss = []
-        repeats = 2        
+        repeats = 4        
         shift_down = 0
         for i in range(repeats):            
             pos11 = copy.deepcopy(pos1)
-            shift_down = -i * 2.75
+            shift_down = i * 2.75
             pos11[2] += shift_down
             poss.append(pos11)
-        p3["pos"] = pos1
+        p3["pos"] = poss
         rot = [90,360/12,0]
         p3["rot"] = rot
         p3["m"] = "#"        
@@ -471,6 +471,7 @@ def get_precision_screwdriver(thing, **kwargs):
 
     #add orings
     if True:
+    #if False:
         for oring in orings:
             p3 = copy.deepcopy(kwargs)
             p3["type"] = "n"
