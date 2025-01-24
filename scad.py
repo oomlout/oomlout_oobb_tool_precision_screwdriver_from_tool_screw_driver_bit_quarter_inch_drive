@@ -308,21 +308,22 @@ def get_precision_screwdriver(thing, **kwargs):
     #main
     radius_big = 13/2
     
-    height_driver = 50
+    height_driver = 75
     #taper
     depth_taper = 5    
     #hex
     hex_side_ratio = 1.1547
     radius_bottom_hex_small = 10/2 * hex_side_ratio
     radius_bottom_hex_big = 13/2 * hex_side_ratio
-    depth_bottom_hex_small = 3
+    depth_bottom_hex_small = 6
     depth_bottom_hex_big = 9
+    lift_bottom_hex_big = 18
     
     #technical
-    bottom_of_shaft = depth_taper + depth_bottom_hex_big + depth_bottom_hex_small
+    bottom_of_shaft = depth_taper + depth_bottom_hex_big + depth_bottom_hex_small + lift_bottom_hex_big + 3
     lift_bit = bottom_of_shaft
-    radius_little = 4/2
-    radius_bit_main = 4/2
+    radius_little = 4.25/2
+    radius_bit_main = 4.25/2
 
     
 
@@ -330,16 +331,19 @@ def get_precision_screwdriver(thing, **kwargs):
     orings = []
     oring = {}
     oring["id"] = 11/2
-    dep = 80
+    dep = 100
     oring["depth"] = dep    
     pos1 = copy.deepcopy(pos)
-    pos1[2] += bottom_of_shaft + 9
+    pos1[2] += bottom_of_shaft + 6
     oring["pos"] = pos1
     orings.append(oring)
 
     oring = copy.deepcopy(oring)
+    oring["id"] = 8/2
+    dep = 70
+    oring["depth"] = dep 
     pos1 = copy.deepcopy(pos)
-    pos1[2] += bottom_of_shaft - 18
+    pos1[2] += bottom_of_shaft - 24
     oring["pos"] = pos1
     orings.append(oring)
 
@@ -370,7 +374,7 @@ def get_precision_screwdriver(thing, **kwargs):
         p3["type"] = "p"
         p3["shape"] = f"oobb_cylinder"
         dep = height_driver - hex_offset
-        reduction =  depth_taper + depth_bottom_hex_big + depth_bottom_hex_small
+        reduction =  depth_taper + depth_bottom_hex_small
         p3["depth"] = dep - reduction
         p3["radius"] = radius_big
         pos1 = copy.deepcopy(pos)
@@ -400,7 +404,7 @@ def get_precision_screwdriver(thing, **kwargs):
         p3["height"] = depth_bottom_hex_big
         p3["radius"] = radius_bottom_hex_big
         pos1 = copy.deepcopy(pos)
-        pos1[2] += depth_taper + depth_bottom_hex_small
+        pos1[2] += depth_taper + depth_bottom_hex_small + lift_bottom_hex_big
         p3["pos"] = pos1
         #p3["m"] = "#"
         oobb_base.append_full(thing,**p3)
@@ -438,7 +442,7 @@ def get_precision_screwdriver(thing, **kwargs):
         pos1 = copy.deepcopy(pos)        
         pos1[0] += 0
         pos1[1] += 0
-        pos1[2] += depth_taper + depth_bottom_hex_small + depth_bottom_hex_big / 2
+        pos1[2] += depth_taper + depth_bottom_hex_small + depth_bottom_hex_big / 2 + lift_bottom_hex_big
         poss = []
         repeats = 4        
         shift_down = 0
