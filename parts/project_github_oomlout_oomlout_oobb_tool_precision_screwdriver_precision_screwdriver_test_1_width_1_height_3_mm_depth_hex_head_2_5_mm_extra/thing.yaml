@@ -1,7 +1,7 @@
 classification: project
-color: oomlout_oobb_tool_precision_screwdriver_from_tool_
+color: oomlout_oobb_tool_precision_screwdriver
 description_extra: ''
-description_main: precision_screwdriver_1_width_1_height_3_mm_depth_hex_head_2_5_mm_extra
+description_main: precision_screwdriver_test_1_width_1_height_3_mm_depth_hex_head_2_5_mm_extra
 full_rotations:
 - 0
 - 0
@@ -10,8 +10,8 @@ full_shift:
 - 0
 - 0
 - 0
-id: project_github_oomlout_oomlout_oobb_tool_precision_screwdriver_from_tool__precision_screwdriver_1_width_1_height_3_mm_depth_hex_head_2_5_mm_extra
-id_oobb: oobb_part_oomlout_oobb_tool_precision_screwdriver_from_tool__precision_screwdriver_1_width_1_height_3_mm_depth_hex_head_2_5_mm_extra_hex_head_2_5_mm_extra
+id: project_github_oomlout_oomlout_oobb_tool_precision_screwdriver_precision_screwdriver_test_1_width_1_height_3_mm_depth_hex_head_2_5_mm_extra
+id_oobb: oobb_part_oomlout_oobb_tool_precision_screwdriver_precision_screwdriver_test_1_width_1_height_3_mm_depth_hex_head_2_5_mm_extra_hex_head_2_5_mm_extra
 kwargs:
   extra: hex_head_2_5_mm
   filter: ''
@@ -20,9 +20,9 @@ kwargs:
   - 3dpr
   navigation: true
   oomp_classification: project
-  oomp_color: oomlout_oobb_tool_precision_screwdriver_from_tool_
+  oomp_color: oomlout_oobb_tool_precision_screwdriver
   oomp_description_extra: ''
-  oomp_description_main: precision_screwdriver_1_width_1_height_3_mm_depth_hex_head_2_5_mm_extra
+  oomp_description_main: precision_screwdriver_test_1_width_1_height_3_mm_depth_hex_head_2_5_mm_extra
   oomp_manufacturer: ''
   oomp_mode: project
   oomp_part_number: ''
@@ -32,10 +32,10 @@ kwargs:
   overwrite: true
   thickness: 3
   typ: all
-  type: oomlout_oobb_tool_precision_screwdriver_from_tool__precision_screwdriver
+  type: oomlout_oobb_tool_precision_screwdriver_precision_screwdriver_test
   width: 1
 manufacturer: ''
-name: precision_screwdriver
+name: precision_screwdriver_test
 part_number: ''
 project_name: C:\gh\oomlout_oobb_tool_precision_screwdriver_from_tool_screw_driver_bit_quarter_inch_drive
 size: oomlout
@@ -43,9 +43,9 @@ thing:
   classification: oobb
   color: ''
   components:
-  - - depth: 20
+  - - depth: 12
       extra: hex_head_2_5_mm
-      h: 20
+      h: 12
       height: 1
       inclusion: laser
       pos: &id001
@@ -53,7 +53,7 @@ thing:
       - 0
       - 0.0
       r1: 4
-      r2: 6.0
+      r2: 10
       rot: &id002
       - 0
       - 0
@@ -61,41 +61,41 @@ thing:
       shape: cylinder
       type: positive
       width: 1
-    - depth: 20
+    - depth: 12
       extra: hex_head_2_5_mm
-      h: 20
+      h: 12
       height: 1
       inclusion: 3dpr
       pos: *id001
       r1: 4
-      r2: 6.0
+      r2: 10
       rot: *id002
       shape: cylinder
       type: positive
       width: 1
-    - depth: 20
+    - depth: 12
       extra: hex_head_2_5_mm
-      h: 20
+      h: 12
       height: 1
       inclusion: 'true'
       pos: *id001
       r1: 4
-      r2: 6.0
+      r2: 10
       rot: *id002
       shape: cylinder
       type: positive
       width: 1
-  - - depth: 40
+  - - depth: 20
       extra: hex_head_2_5_mm
-      h: 40
+      h: 20
       height: 1
       inclusion: laser
       pos: &id003
       - 0
       - 0
-      - 20.0
-      r: 6.0
-      radius: 6.0
+      - 12.0
+      r: 10
+      radius: 10
       rot: &id004
       - 0
       - 0
@@ -103,25 +103,25 @@ thing:
       shape: cylinder
       type: positive
       width: 1
-    - depth: 40
+    - depth: 20
       extra: hex_head_2_5_mm
-      h: 40
+      h: 20
       height: 1
       inclusion: 3dpr
       pos: *id003
-      r: 6.0
+      r: 10
       rot: *id004
       shape: cylinder
       type: positive
       width: 1
-    - depth: 40
+    - depth: 20
       extra: hex_head_2_5_mm
-      h: 40
+      h: 20
       height: 1
       inclusion: 'true'
       pos: *id003
-      r: 6.0
-      radius: 6.0
+      r: 10
+      radius: 10
       rot: *id004
       shape: cylinder
       type: positive
@@ -134,7 +134,7 @@ thing:
             pos:
             - 0.1
             - 0
-            - 10
+            - 0
             r: 3.8658550000000003
             shape: polyg
             sides: 6
@@ -147,7 +147,7 @@ thing:
             pos:
             - 0
             - 0
-            - 10
+            - 0
             r1: 2.6
             r2: 3.775
             shape: tube_new
@@ -164,7 +164,7 @@ thing:
             pos: &id005
             - 0
             - 0
-            - -61.8
+            - -71.8
             r: 2.6
             radius: 2.6
             shape: cylinder
@@ -198,7 +198,7 @@ thing:
       pos:
       - 0
       - 0
-      - 10
+      - 0
       rot:
       - 0
       - 0
@@ -206,7 +206,7 @@ thing:
       type: rotation
       typetype: n
   components_objects:
-  - depth: 20
+  - depth: 12
     extra: hex_head_2_5_mm
     filter: ''
     height: 1
@@ -214,7 +214,7 @@ thing:
     - 3dpr
     navigation: true
     oomp_classification: project
-    oomp_color: oomlout_oobb_tool_precision_screwdriver_from_tool_
+    oomp_color: oomlout_oobb_tool_precision_screwdriver
     oomp_description_extra: ''
     oomp_description_main: ''
     oomp_manufacturer: ''
@@ -229,7 +229,7 @@ thing:
     - 0
     - 0
     r1: 4
-    r2: 6.0
+    r2: 10
     rot:
     - 0
     - 0
@@ -241,7 +241,7 @@ thing:
     type: p
     width: 1
     zz: bottom
-  - depth: 40
+  - depth: 20
     extra: hex_head_2_5_mm
     filter: ''
     height: 1
@@ -249,7 +249,7 @@ thing:
     - 3dpr
     navigation: true
     oomp_classification: project
-    oomp_color: oomlout_oobb_tool_precision_screwdriver_from_tool_
+    oomp_color: oomlout_oobb_tool_precision_screwdriver
     oomp_description_extra: ''
     oomp_description_main: ''
     oomp_manufacturer: ''
@@ -262,8 +262,8 @@ thing:
     pos:
     - 0
     - 0
-    - 20
-    radius: 6.0
+    - 12
+    radius: 10
     rot:
     - 0
     - 0
@@ -276,26 +276,26 @@ thing:
     width: 1
     zz: bottom
   components_string:
-  - oobb_cylinder_shape_p_type_20_depth_all_typ_all_save_type_true_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_true_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_from_tool__oomp_color_hex_head_2_5_mm_extra_6.0_r2_4_r1_bottom_zz_0_0_0_rot
-  - oobb_cylinder_shape_p_type_40_depth_0_0_20_pos_all_typ_all_save_type_true_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_true_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_from_tool__oomp_color_hex_head_2_5_mm_extra_6.0_radius_0_0_0_rot_bottom_zz
-  description: oomlout oobb tool precision screwdriver from tool  precision screwdriver
+  - oobb_cylinder_shape_p_type_12_depth_all_typ_all_save_type_true_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_true_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_10_r2_4_r1_bottom_zz_0_0_0_rot
+  - oobb_cylinder_shape_p_type_20_depth_0_0_12_pos_all_typ_all_save_type_true_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_true_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_10_radius_0_0_0_rot_bottom_zz
+  description: oomlout oobb tool precision screwdriver precision screwdriver test
     1x1x3
   description_extra: hex_head_2_5_mm_extra
   description_main: 1_width_1_height_3_mm_depth_hex_head_2_5_mm_extra
   extra: hex_head_2_5_mm
-  folder: C:\gh\oomlout_oobb_version_4_generated_parts\parts\oobb_part_oomlout_oobb_tool_precision_screwdriver_from_tool__precision_screwdriver_1_width_1_height_3_mm_depth_hex_head_2_5_mm_extra_hex_head_2_5_mm_extra
+  folder: C:\gh\oomlout_oobb_version_4_generated_parts\parts\oobb_part_oomlout_oobb_tool_precision_screwdriver_precision_screwdriver_test_1_width_1_height_3_mm_depth_hex_head_2_5_mm_extra_hex_head_2_5_mm_extra
   height: 1
   height_mm: 14
-  id: oobb_part_oomlout_oobb_tool_precision_screwdriver_from_tool__precision_screwdriver_1_width_1_height_3_mm_depth_hex_head_2_5_mm_extra_hex_head_2_5_mm_extra
-  link_main: https://github.com/oomlout/oomlout_oobb_version_4_generated_parts/tree/main/navigation_oomp/oobb/part/oomlout_oobb_tool_precision_screwdriver_from_tool__precision_screwdriver/1_width_1_height_3_mm_depth_hex_head_2_5_mm_extra/hex_head_2_5_mm_extra/part
-  link_redirect: https://github.com/oomlout/oomlout_oobb_version_4_generated_parts/tree/main/parts/oobb_oomlout_oobb_tool_precision_screwdriver_from_tool__precision_screwdriver_01_01_03_ex_hex_head_2_5_mm
+  id: oobb_part_oomlout_oobb_tool_precision_screwdriver_precision_screwdriver_test_1_width_1_height_3_mm_depth_hex_head_2_5_mm_extra_hex_head_2_5_mm_extra
+  link_main: https://github.com/oomlout/oomlout_oobb_version_4_generated_parts/tree/main/navigation_oomp/oobb/part/oomlout_oobb_tool_precision_screwdriver_precision_screwdriver_test/1_width_1_height_3_mm_depth_hex_head_2_5_mm_extra/hex_head_2_5_mm_extra/part
+  link_redirect: https://github.com/oomlout/oomlout_oobb_version_4_generated_parts/tree/main/parts/oobb_oomlout_oobb_tool_precision_screwdriver_precision_screwdriver_test_01_01_03_ex_hex_head_2_5_mm
   manufacturer: ''
-  name: Oobb Part Oomlout Oobb Tool Precision Screwdriver From Tool  Precision Screwdriver
+  name: Oobb Part Oomlout Oobb Tool Precision Screwdriver Precision Screwdriver Test
     1 Width 1 Height 3 mm Depth Hex Head 2 5 mm Extra Hex Head 2 5 mm Extra
   name_short: Oomlout Oobb Tool Precision Screwdriver
   part_number: ''
   short_name: ''
-  size: oomlout_oobb_tool_precision_screwdriver_from_tool__precision_screwdriver
+  size: oomlout_oobb_tool_precision_screwdriver_precision_screwdriver_test
   thickness: 3
   thickness_mm: 3
   type: part

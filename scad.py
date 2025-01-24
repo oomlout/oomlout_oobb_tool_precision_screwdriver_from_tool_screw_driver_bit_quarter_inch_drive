@@ -74,9 +74,12 @@ def make_scad(**kwargs):
         directory_name = directory_name.replace("/", "\\")
         project_name = directory_name.split("\\")[-1]
         #max 60 characters
-        length_max = 50
+        length_max = 40
         if len(project_name) > length_max:
             project_name = project_name[:length_max]
+            #if ends with a _ remove it 
+            if project_name[-1] == "_":
+                project_name = project_name[:-1]
 
         #defaults
         kwargs["size"] = "oobb"

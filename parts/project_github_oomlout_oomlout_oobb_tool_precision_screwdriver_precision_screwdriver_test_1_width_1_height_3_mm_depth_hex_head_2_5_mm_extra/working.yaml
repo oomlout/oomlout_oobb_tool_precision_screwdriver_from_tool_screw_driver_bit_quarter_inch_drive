@@ -1,5 +1,5 @@
 classification: project
-color: oomlout_oobb_tool_precision_screwdriver_from_tool_
+color: oomlout_oobb_tool_precision_screwdriver
 description_extra: ''
 description_main: precision_screwdriver_test_1_width_1_height_3_mm_depth_hex_head_2_5_mm_extra
 full_rotations:
@@ -10,8 +10,8 @@ full_shift:
 - 0
 - 0
 - 0
-id: project_github_oomlout_oomlout_oobb_tool_precision_screwdriver_from_tool__precision_screwdriver_test_1_width_1_height_3_mm_depth_hex_head_2_5_mm_extra
-id_oobb: oobb_part_oomlout_oobb_tool_precision_screwdriver_from_tool__precision_screwdriver_test_1_width_1_height_3_mm_depth_hex_head_2_5_mm_extra_hex_head_2_5_mm_extra
+id: project_github_oomlout_oomlout_oobb_tool_precision_screwdriver_precision_screwdriver_test_1_width_1_height_3_mm_depth_hex_head_2_5_mm_extra
+id_oobb: oobb_part_oomlout_oobb_tool_precision_screwdriver_precision_screwdriver_test_1_width_1_height_3_mm_depth_hex_head_2_5_mm_extra_hex_head_2_5_mm_extra
 kwargs:
   extra: hex_head_2_5_mm
   filter: ''
@@ -20,7 +20,7 @@ kwargs:
   - 3dpr
   navigation: true
   oomp_classification: project
-  oomp_color: oomlout_oobb_tool_precision_screwdriver_from_tool_
+  oomp_color: oomlout_oobb_tool_precision_screwdriver
   oomp_description_extra: ''
   oomp_description_main: precision_screwdriver_test_1_width_1_height_3_mm_depth_hex_head_2_5_mm_extra
   oomp_manufacturer: ''
@@ -32,7 +32,7 @@ kwargs:
   overwrite: true
   thickness: 3
   typ: all
-  type: oomlout_oobb_tool_precision_screwdriver_from_tool__precision_screwdriver_test
+  type: oomlout_oobb_tool_precision_screwdriver_precision_screwdriver_test
   width: 1
 manufacturer: ''
 name: precision_screwdriver_test
