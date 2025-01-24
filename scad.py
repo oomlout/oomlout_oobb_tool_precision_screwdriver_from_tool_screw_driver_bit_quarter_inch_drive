@@ -306,9 +306,9 @@ def get_precision_screwdriver(thing, **kwargs):
     
 
     #main
-    radius_big = 12/2
+    radius_big = 13/2
     
-    height_driver = 40
+    height_driver = 50
     #taper
     depth_taper = 5    
     #hex
@@ -319,9 +319,31 @@ def get_precision_screwdriver(thing, **kwargs):
     depth_bottom_hex_big = 6
     
     #technical
-    lift_bit = depth_taper + depth_bottom_hex_big + depth_bottom_hex_small
+    bottom_of_shaft = depth_taper + depth_bottom_hex_big + depth_bottom_hex_small
+    lift_bit = bottom_of_shaft
     radius_little = 4/2
     radius_bit_main = 4/2
+
+    
+
+    #donut cutouts
+    orings = []
+    oring = {}
+    oring["id"] = 10/2
+    dep = 80
+    oring["depth"] = dep    
+    pos1 = copy.deepcopy(pos)
+    pos1[2] += bottom_of_shaft + 10.7
+    oring["pos"] = pos1
+    orings.append(oring)
+
+    oring = copy.deepcopy(oring)
+    pos1 = copy.deepcopy(pos)
+    pos1[2] += bottom_of_shaft - 17
+    oring["pos"] = pos1
+    orings.append(oring)
+
+
 
     #bottom taper piece
     if True:
@@ -446,6 +468,23 @@ def get_precision_screwdriver(thing, **kwargs):
         p3["rot"] = rot
         p3["m"] = "#"
         oobb_base.append_full(thing,**p3)
+
+    #add orings
+    if True:
+        for oring in orings:
+            p3 = copy.deepcopy(kwargs)
+            p3["type"] = "n"
+            p3["shape"] = f"oring"
+            p3["depth"] = oring["depth"]
+            p3["id"] = oring["id"]
+            pos1 = copy.deepcopy(pos)
+            pos1[0] += oring["pos"][0]
+            pos1[1] += oring["pos"][1]
+            pos1[2] += oring["pos"][2]
+            p3["pos"] = pos1
+
+            #p3["m"] = "#"
+            oobb_base.append_full(thing,**p3)
 
     if prepare_print:
         #put into a rotation object

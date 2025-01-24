@@ -5,7 +5,7 @@ difference() {
 	union() {
 		cylinder(h = 5, r1 = 2.0000000000, r2 = 4.7735000000);
 		translate(v = [0, 0, 14.0000000000]) {
-			cylinder(h = 16, r = 6.0000000000);
+			cylinder(h = 26, r = 6.5000000000);
 		}
 		translate(v = [0, 0, 5]) {
 			linear_extrude(height = 3) {
@@ -45,7 +45,7 @@ difference() {
 			rotate(a = [90, 30.0000000000, 0]) {
 				difference() {
 					union() {
-						#linear_extrude(height = 5.0000000000) {
+						#linear_extrude(height = 5.5000000000) {
 							polygon(points = [[3.4620000000, 0.0000000000], [1.7310000000, 2.9981799479], [-1.7310000000, 2.9981799479], [-3.4620000000, 0.0000000000], [-1.7310000000, -2.9981799479], [1.7310000000, -2.9981799479]]);
 						}
 					}
@@ -56,6 +56,20 @@ difference() {
 		#translate(v = [0, 0, 11.0000000000]) {
 			rotate(a = [90, 0, 0]) {
 				cylinder(h = 12, r = 1.8000000000);
+			}
+		}
+		translate(v = [0, 0, 24.7000000000]) {
+			rotate_extrude(angle = 360) {
+				translate(v = [45.0000000000, 0, 0]) {
+					circle(r = 40.0000000000);
+				}
+			}
+		}
+		translate(v = [0, 0, -3]) {
+			rotate_extrude(angle = 360) {
+				translate(v = [45.0000000000, 0, 0]) {
+					circle(r = 40.0000000000);
+				}
 			}
 		}
 	}
