@@ -303,10 +303,7 @@ def get_precision_screwdriver(thing, **kwargs):
     #pos = copy.deepcopy(pos)
     #pos[2] += -20
 
-    #technical
-    lift_bit = 13
-    radius_little = 4/2
-    radius_bit_main = 4/2
+    
 
     #main
     radius_big = 12/2
@@ -321,6 +318,11 @@ def get_precision_screwdriver(thing, **kwargs):
     depth_bottom_hex_small = 3
     depth_bottom_hex_big = 6
     
+    #technical
+    lift_bit = depth_taper + depth_bottom_hex_big + depth_bottom_hex_small
+    radius_little = 4/2
+    radius_bit_main = 4/2
+
     #bottom taper piece
     if True:
         p3 = copy.deepcopy(kwargs)
@@ -333,7 +335,8 @@ def get_precision_screwdriver(thing, **kwargs):
         p3["zz"] = "bottom"
         p3["rot"] = [0,0,0]
         #p3["m"] = "#"
-        pos1 = copy.deepcopy(pos)         
+        pos1 = copy.deepcopy(pos)  
+        #pos1[1] += 10       
         p3["pos"] = pos1
         oobb_base.append_full(thing,**p3)
     
@@ -387,6 +390,7 @@ def get_precision_screwdriver(thing, **kwargs):
         p3["type"] = "n"
         #p3["type"] = "p"
         pos1 = copy.deepcopy(pos)
+        #pos1[0] += 20
         pos1[2] += lift_bit
         p3["pos"] = pos1
 
@@ -395,6 +399,9 @@ def get_precision_screwdriver(thing, **kwargs):
         p3["clearance"] = 0.2
         p3["clearance_top"] = True
         p3["radius_bit_main"] = radius_bit_main
+        pos1 = copy.deepcopy(pos)
+        
+        
         return_value_2 = get_holder_blank(thing, **p3)
 
     #add lock nut
@@ -409,16 +416,16 @@ def get_precision_screwdriver(thing, **kwargs):
         pos1 = copy.deepcopy(pos)        
         pos1[0] += 0
         pos1[1] += 0
-        pos1[2] += lift_bit + 12
+        pos1[2] += lift_bit - depth_bottom_hex_big/2
         poss = []
-        repeats = 6        
+        repeats = 2        
         shift_down = 0
         for i in range(repeats):            
             pos11 = copy.deepcopy(pos1)
             shift_down = -i * 2.75
             pos11[2] += shift_down
             poss.append(pos11)
-        p3["pos"] = poss
+        p3["pos"] = pos1
         rot = [90,360/12,0]
         p3["rot"] = rot
         p3["m"] = "#"        
@@ -433,7 +440,7 @@ def get_precision_screwdriver(thing, **kwargs):
         p3["include_nut"] = True
         p3["clearance"] = ["top", "bottom"]
         pos12 = copy.deepcopy(pos1)
-        pos12[2] += shift_down
+        pos12[2] += 0
         p3["pos"] = pos12
         rot = [90,0,0]
         p3["rot"] = rot
@@ -575,6 +582,7 @@ def get_holder_blank(thing, **kwargs):
     pos_original = copy.deepcopy(copy.deepcopy(kwargs.get("pos", [0, 0, 0])))
     pos_original_original = copy.deepcopy(pos_original)
     kwargs.pop("pos", None)
+    pos = [0,0,0]
     
 
     
