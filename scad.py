@@ -308,7 +308,11 @@ def get_precision_screwdriver(thing, **kwargs):
     #main
     radius_big = 13/2
     
-    height_driver = 75
+    height_driver = 100
+    height_top_taper = 25
+    diameter_top_taper = 22
+    height_top = 10
+    diameter_top = 25
     #taper
     depth_taper = 5    
     #hex
@@ -321,7 +325,7 @@ def get_precision_screwdriver(thing, **kwargs):
     
     #technical
     bottom_of_shaft = depth_taper + depth_bottom_hex_big + depth_bottom_hex_small + lift_bottom_hex_big + 3
-    lift_bit = bottom_of_shaft
+    lift_bit = bottom_of_shaft - 5
     radius_little = 4.25/2
     radius_bit_main = 4.25/2
 
@@ -338,7 +342,9 @@ def get_precision_screwdriver(thing, **kwargs):
     oring["pos"] = pos1
     orings.append(oring)
 
-    oring = copy.deepcopy(oring)
+    default_oring = copy.deepcopy(oring)
+
+    oring = copy.deepcopy(default_oring)
     oring["id"] = 8/2
     dep = 70
     oring["depth"] = dep 
@@ -346,6 +352,19 @@ def get_precision_screwdriver(thing, **kwargs):
     pos1[2] += bottom_of_shaft - 24
     oring["pos"] = pos1
     orings.append(oring)
+
+
+    oring = copy.deepcopy(default_oring)
+    oring["id"] = 11.5/2
+    dep = 120
+    oring["depth"] = dep 
+    pos1 = copy.deepcopy(pos)
+    pos1[2] += height_driver - 32.5
+    oring["pos"] = pos1
+    
+    orings.append(oring)
+
+        
 
 
 
@@ -373,7 +392,7 @@ def get_precision_screwdriver(thing, **kwargs):
         p3 = copy.deepcopy(kwargs)
         p3["type"] = "p"
         p3["shape"] = f"oobb_cylinder"
-        dep = height_driver - hex_offset
+        dep = height_driver - hex_offset - height_top_taper
         reduction =  depth_taper + depth_bottom_hex_small
         p3["depth"] = dep - reduction
         p3["radius"] = radius_big
@@ -385,6 +404,36 @@ def get_precision_screwdriver(thing, **kwargs):
         #p3["m"] = "#"
         oobb_base.append_full(thing,**p3)
     
+    #top_taper
+    if True:
+        p3 = copy.deepcopy(kwargs)
+        p3["type"] = "p"
+        p3["shape"] = f"oobb_cylinder"
+        dep = height_top_taper
+        p3["depth"] = dep
+        p3["r2"] = diameter_top_taper / 2
+        p3["r1"] = radius_big
+        pos1 = copy.deepcopy(pos)
+        pos1[2] += height_driver - height_top_taper/2 - height_top
+        p3["pos"] = pos1               
+        #p3["m"] = "#"
+        oobb_base.append_full(thing,**p3)
+
+    #top piece
+    if True:
+        p3 = copy.deepcopy(kwargs)
+        p3["type"] = "p"
+        p3["shape"] = f"oobb_cylinder"
+        dep = height_top
+        p3["depth"] = dep
+        p3["radius"] = diameter_top / 2
+        pos1 = copy.deepcopy(pos)
+        pos1[2] += height_driver - dep/2
+        p3["pos"] = pos1
+        p3["rot"] = [0,0,0]
+        #p3["m"] = "#"
+        oobb_base.append_full(thing,**p3)
+
     #hex_bottom
     if True:
         #10mm piece
@@ -444,7 +493,7 @@ def get_precision_screwdriver(thing, **kwargs):
         pos1[1] += 0
         pos1[2] += depth_taper + depth_bottom_hex_small + depth_bottom_hex_big / 2 + lift_bottom_hex_big
         poss = []
-        repeats = 4        
+        repeats = 2        
         shift_down = 0
         for i in range(repeats):            
             pos11 = copy.deepcopy(pos1)
