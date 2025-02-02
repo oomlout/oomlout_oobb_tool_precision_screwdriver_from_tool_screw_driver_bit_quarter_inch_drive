@@ -155,25 +155,25 @@ thing:
             wall_thickness: 8
             width: 1
       - - - clearance: 0.2
-            depth: 100
+            depth: 150
             extra: hex_head_2_5_mm
-            h: 100
+            h: 150
             height: 1
             inclusion: laser
             m: '#'
             pos: &id005
             - 0
             - 0
-            - -71.8
+            - -121.8
             r: 1.85
             radius: 1.85
             shape: cylinder
             type: positive
             width: 1
           - clearance: 0.2
-            depth: 100
+            depth: 150
             extra: hex_head_2_5_mm
-            h: 100
+            h: 150
             height: 1
             inclusion: 3dpr
             m: '#'
@@ -183,9 +183,9 @@ thing:
             type: positive
             width: 1
           - clearance: 0.2
-            depth: 100
+            depth: 150
             extra: hex_head_2_5_mm
-            h: 100
+            h: 150
             height: 1
             inclusion: 'true'
             m: '#'

@@ -306,13 +306,14 @@ def get_precision_screwdriver(thing, **kwargs):
     
 
     #main
-    radius_big = 13/2
+    radius_big = 10/2
     
     height_driver = 100
-    height_top_taper = 25
-    diameter_top_taper = 22
-    height_top = 10
-    diameter_top = 25
+    
+    diameter_top_taper = 18
+    height_top = 5
+    height_top_taper = 35 - height_top
+    diameter_top = 18
     #taper
     depth_taper = 5    
     #hex
@@ -321,7 +322,7 @@ def get_precision_screwdriver(thing, **kwargs):
     radius_bottom_hex_big = 13/2 * hex_side_ratio
     depth_bottom_hex_small = 6
     depth_bottom_hex_big = 9
-    lift_bottom_hex_big = 18
+    lift_bottom_hex_big = 14 #18
     
     #technical
     bottom_of_shaft = depth_taper + depth_bottom_hex_big + depth_bottom_hex_small + lift_bottom_hex_big + 3
@@ -333,36 +334,70 @@ def get_precision_screwdriver(thing, **kwargs):
 
     #donut cutouts
     orings = []
-    oring = {}
-    oring["id"] = 11/2
-    dep = 100
-    oring["depth"] = dep    
-    pos1 = copy.deepcopy(pos)
-    pos1[2] += bottom_of_shaft + 6
-    oring["pos"] = pos1
-    orings.append(oring)
+    length_of_gap = lift_bottom_hex_big /2
+    middle_of_hex = depth_taper + depth_bottom_hex_small + length_of_gap
+    top_of_hex = middle_of_hex + length_of_gap + depth_bottom_hex_big
+    donut_shift = 2
+    second_donut_level = top_of_hex + length_of_gap + donut_shift
 
-    default_oring = copy.deepcopy(oring)
+    if True:
+        oring = {}
+        oring["id"] = 8/2
+        dep = 45
+        oring["depth"] = dep    
+        pos1 = copy.deepcopy(pos)
+        pos1[2] += middle_of_hex - donut_shift
+        oring["pos"] = pos1
+        orings.append(oring)
 
-    oring = copy.deepcopy(default_oring)
-    oring["id"] = 8/2
-    dep = 70
-    oring["depth"] = dep 
-    pos1 = copy.deepcopy(pos)
-    pos1[2] += bottom_of_shaft - 24
-    oring["pos"] = pos1
-    orings.append(oring)
+        oring = copy.deepcopy(oring)
+        pos1 = copy.deepcopy(pos)
+        pos1[2] += second_donut_level
+        oring["pos"] = pos1
+        orings.append(oring)
+
+        oring = {}
+        oring["id"] = 9/2
+        dep = 300
+        oring["depth"] = dep
+        pos1 = copy.deepcopy(pos)
+        pos1[2] += 60
+        oring["pos"] = pos1
+        orings.append(oring)
 
 
-    oring = copy.deepcopy(default_oring)
-    oring["id"] = 11.5/2
-    dep = 120
-    oring["depth"] = dep 
-    pos1 = copy.deepcopy(pos)
-    pos1[2] += height_driver - 32.5
-    oring["pos"] = pos1
-    
-    orings.append(oring)
+    #old donuts
+    if False:
+
+        oring = {}
+        oring["id"] = 11/2
+        dep = 100
+        oring["depth"] = dep    
+        pos1 = copy.deepcopy(pos)
+        pos1[2] += bottom_of_shaft + 6
+        oring["pos"] = pos1
+        #orings.append(oring)
+
+        default_oring = copy.deepcopy(oring)
+
+        oring = copy.deepcopy(default_oring)
+        oring["id"] = 8/2
+        dep = 70
+        oring["depth"] = dep 
+        pos1 = copy.deepcopy(pos)
+        pos1[2] += bottom_of_shaft - 24
+        oring["pos"] = pos1
+        #orings.append(oring)
+
+
+        oring = copy.deepcopy(default_oring)
+        oring["id"] = 11.5/2
+        dep = 120
+        oring["depth"] = dep 
+        pos1 = copy.deepcopy(pos)
+        pos1[2] += height_driver - 32.5
+        oring["pos"] = pos1    
+        #orings.append(oring)
 
         
 
@@ -388,12 +423,12 @@ def get_precision_screwdriver(thing, **kwargs):
     #main_cylinder
     if True:    
     #if False:    
-        hex_offset = 10
+        hex_offset = 0
         p3 = copy.deepcopy(kwargs)
         p3["type"] = "p"
         p3["shape"] = f"oobb_cylinder"
         dep = height_driver - hex_offset - height_top_taper
-        reduction =  depth_taper + depth_bottom_hex_small
+        reduction =  depth_taper + depth_bottom_hex_small 
         p3["depth"] = dep - reduction
         p3["radius"] = radius_big
         pos1 = copy.deepcopy(pos)
@@ -800,7 +835,7 @@ def get_holder_blank(thing, **kwargs):
         p3 = copy.deepcopy(kwargs)
         #p3["type"] = "n"
         p3["shape"] = f"oobb_cylinder"
-        dep = 100
+        dep = 150
         p3["depth"] = dep
         
         p3["radius"] = radius_bit_main + clearance / 2
