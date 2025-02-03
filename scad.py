@@ -312,23 +312,26 @@ def get_precision_screwdriver(thing, **kwargs):
     
     diameter_top_taper = 18
     height_top = 5
-    height_top_taper = 35 - height_top
+    height_top_taper = 35 + 5 - height_top
     diameter_top = 18
     #taper
-    depth_taper = 5    
+    depth_taper = 3    
     #hex
     hex_side_ratio = 1.1547
     radius_bottom_hex_small = 10/2 * hex_side_ratio
     radius_bottom_hex_big = 13/2 * hex_side_ratio
     depth_bottom_hex_small = 6
     depth_bottom_hex_big = 9
-    lift_bottom_hex_big = 14 #18
+
+    fudge_factor_bit_lift_extra = 27
+
+    lift_bottom_hex_big = 14 + fudge_factor_bit_lift_extra #18
     
     #technical
     bottom_of_shaft = depth_taper + depth_bottom_hex_big + depth_bottom_hex_small + lift_bottom_hex_big + 3
-    lift_bit = bottom_of_shaft - 5
+    lift_bit = bottom_of_shaft - 5 + fudge_factor_bit_lift_extra
     radius_little = 4.25/2
-    radius_bit_main = 4.25/2
+    radius_bit_main = 3.25/2#4.25/2
 
     
 
@@ -337,10 +340,45 @@ def get_precision_screwdriver(thing, **kwargs):
     length_of_gap = lift_bottom_hex_big /2
     middle_of_hex = depth_taper + depth_bottom_hex_small + length_of_gap
     top_of_hex = middle_of_hex + length_of_gap + depth_bottom_hex_big
-    donut_shift = 2
-    second_donut_level = top_of_hex + length_of_gap + donut_shift
+    donut_shift = 1.8
+    #second_donut_level = top_of_hex + length_of_gap + donut_shift
 
     if True:
+        oring = {}
+        oring["id"] = 8/2
+        dep = 150
+        oring["depth"] = dep    
+        pos1 = copy.deepcopy(pos)
+        pos1[2] += middle_of_hex
+        poss = []
+        pos11 = copy.deepcopy(pos1)
+        pos11[2] += donut_shift * 2
+        pos12 = copy.deepcopy(pos1)
+        pos12[2] += donut_shift
+        pos13 = copy.deepcopy(pos1)
+        pos13[2] += -donut_shift
+        pos14 = copy.deepcopy(pos1)
+        pos14[2] += -donut_shift * 2
+        poss.append(pos11)
+        poss.append(pos12)
+        poss.append(pos13)
+        poss.append(pos14)        
+        oring["pos"] = poss
+        orings.append(oring)
+
+        oring = copy.deepcopy(oring)
+        oring["id"] = 11/2
+        pos1 = copy.deepcopy(pos)
+        pos1[2] += top_of_hex + length_of_gap/2
+        oring["pos"] = pos1
+        orings.append(oring)
+
+        oring = copy.deepcopy(oring)
+
+
+
+    #second try
+    if False:
         oring = {}
         oring["id"] = 8/2
         dep = 45
@@ -561,19 +599,24 @@ def get_precision_screwdriver(thing, **kwargs):
     if True:
     #if False:
         for oring in orings:
-            p3 = copy.deepcopy(kwargs)
-            p3["type"] = "n"
-            p3["shape"] = f"oring"
-            p3["depth"] = oring["depth"]
-            p3["id"] = oring["id"]
-            pos1 = copy.deepcopy(pos)
-            pos1[0] += oring["pos"][0]
-            pos1[1] += oring["pos"][1]
-            pos1[2] += oring["pos"][2]
-            p3["pos"] = pos1
+            oring_poss = oring["pos"]
+            #if not an array of arrays make it one
+            if not isinstance(oring_poss[0], list):
+                oring_poss = [oring_poss]            
+            for oring_pos in oring_poss:
+                p3 = copy.deepcopy(kwargs)
+                p3["type"] = "n"
+                p3["shape"] = f"oring"
+                p3["depth"] = oring["depth"]
+                p3["id"] = oring["id"]
+                pos1 = copy.deepcopy(pos)
+                pos1[0] += oring_pos[0]
+                pos1[1] += oring_pos[1]
+                pos1[2] += oring_pos[2]
+                p3["pos"] = pos1
 
-            #p3["m"] = "#"
-            oobb_base.append_full(thing,**p3)
+                #p3["m"] = "#"
+                oobb_base.append_full(thing,**p3)
 
     if prepare_print:
         #put into a rotation object
