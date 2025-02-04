@@ -1091,7 +1091,7 @@ thing:
   - - objects:
       - - - clearance: 0.2
             extra: hex_head_2_5_mm
-            height: 28.2
+            height: 228.2
             m: '#'
             pos:
             - 0.1
