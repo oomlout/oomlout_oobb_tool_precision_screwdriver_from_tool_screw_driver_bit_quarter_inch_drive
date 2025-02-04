@@ -14,7 +14,7 @@ id: project_github_oomlout_oomlout_oobb_tool_precision_screwdriver_precision_scr
 id_oobb: oobb_part_oomlout_oobb_tool_precision_screwdriver_precision_screwdriver_test_nut_drop_1_width_1_height_3_mm_depth_hex_head_2_5_mm_extra
 kwargs:
   extra: hex_head_2_5_mm
-  filter: nut_drop
+  filter: ''
   height: 1
   modes:
   - 3dpr
@@ -2867,7 +2867,7 @@ thing:
   components_objects:
   - depth: 10
     extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     modes:
     - 3dpr
@@ -2899,7 +2899,7 @@ thing:
     width: 1
   - extra: hex_head_2_5_mm
     extra_clearance: -0.6
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -2929,7 +2929,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -2962,7 +2962,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -2995,7 +2995,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -3028,7 +3028,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -3061,7 +3061,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -3094,7 +3094,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -3127,7 +3127,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -3160,7 +3160,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -3193,7 +3193,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -3226,7 +3226,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -3259,7 +3259,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -3292,7 +3292,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -3325,7 +3325,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -3358,7 +3358,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -3391,7 +3391,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -3424,7 +3424,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -3457,7 +3457,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -3490,7 +3490,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -3523,7 +3523,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -3556,7 +3556,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -3589,7 +3589,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -3622,7 +3622,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -3655,7 +3655,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -3688,7 +3688,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -3721,7 +3721,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -3754,7 +3754,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -3787,7 +3787,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -3820,7 +3820,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -3853,7 +3853,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -3886,7 +3886,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -3919,7 +3919,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -3952,7 +3952,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -3985,7 +3985,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -4018,7 +4018,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -4051,7 +4051,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -4084,7 +4084,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -4117,7 +4117,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -4150,7 +4150,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -4183,7 +4183,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -4216,7 +4216,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -4249,7 +4249,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -4282,7 +4282,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -4315,7 +4315,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -4348,7 +4348,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -4381,7 +4381,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -4414,7 +4414,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -4447,7 +4447,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -4480,7 +4480,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -4513,7 +4513,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -4546,7 +4546,7 @@ thing:
     width: 1
     zz: top
   - extra: hex_head_2_5_mm
-    filter: nut_drop
+    filter: ''
     height: 1
     m: '#'
     modes:
@@ -4579,58 +4579,58 @@ thing:
     width: 1
     zz: top
   components_string:
-  - oobb_cylinder_shape_p_type_10_depth_0_0_90.0_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_9.0_radius_0_0_0_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_95.6_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_true_overhang_-0.6_extra_clearance_top_zz
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_0.0_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_0.9_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_1.8_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_2.7_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_3.6_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_4.5_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_5.4_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_6.3_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_7.2_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_8.1_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_9.0_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_9.9_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_10.8_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_11.700000000000001_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_12.6_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_13.5_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_14.4_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_15.3_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_16.2_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_17.1_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_18.0_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_18.900000000000002_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_19.8_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_20.7_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_21.6_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_22.5_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_23.400000000000002_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_24.3_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_25.2_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_26.1_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_27.0_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_27.900000000000002_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_28.8_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_29.7_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_30.6_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_31.5_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_32.4_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_33.300000000000004_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_34.2_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_35.1_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_36.0_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_36.9_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_37.800000000000004_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_38.7_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_39.6_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_40.5_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_41.4_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_42.300000000000004_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_43.2_rot
-  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_nut_drop_filter_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_44.1_rot
+  - oobb_cylinder_shape_p_type_10_depth_0_0_90.0_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_9.0_radius_0_0_0_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_95.6_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_true_overhang_-0.6_extra_clearance_top_zz
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_0.0_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_0.9_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_1.8_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_2.7_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_3.6_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_4.5_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_5.4_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_6.3_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_7.2_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_8.1_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_9.0_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_9.9_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_10.8_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_11.700000000000001_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_12.6_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_13.5_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_14.4_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_15.3_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_16.2_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_17.1_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_18.0_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_18.900000000000002_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_19.8_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_20.7_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_21.6_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_22.5_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_23.400000000000002_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_24.3_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_25.2_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_26.1_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_27.0_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_27.900000000000002_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_28.8_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_29.7_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_30.6_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_31.5_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_32.4_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_33.300000000000004_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_34.2_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_35.1_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_36.0_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_36.9_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_37.800000000000004_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_38.7_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_39.6_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_40.5_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_41.4_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_42.300000000000004_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_43.2_rot
+  - oobb_nut_shape_n_type_m6_radius_name_0_0_93.2_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_top_zz_0_0_44.1_rot
   description: oomlout oobb tool precision screwdriver precision screwdriver test
     nut drop 1x1x3
   description_extra: hex_head_2_5_mm_extra

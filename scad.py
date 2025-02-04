@@ -27,7 +27,7 @@ def make_scad(**kwargs):
         filter = ""; save_type = "all"; navigation = True; overwrite = True; modes = ["3dpr"]; oomp_run = True
         #filter = ""; save_type = "all"; navigation = True; overwrite = True; modes = ["3dpr", "laser", "true"]
     elif typ == "fast":
-        filter = "nut_drop"; save_type = "none"; navigation = False; overwrite = True; modes = ["3dpr"]; oomp_run = False
+        filter = ""; save_type = "none"; navigation = False; overwrite = True; modes = ["3dpr"]; oomp_run = False
     elif typ == "manual":
     #filter
         filter = ""
@@ -902,7 +902,7 @@ def get_precision_screwdriver(thing, **kwargs):
     bottom_of_shaft = depth_taper + depth_bottom_hex_big + depth_bottom_hex_small + lift_bottom_hex_big + 3
     lift_bit = bottom_of_shaft - 5 + fudge_fudge_factor_bit_lift_extra
     radius_little = 4.25/2
-    radius_bit_main = 3.25/2#4.25/2
+    radius_bit_main = 4/2#4.25/2
 
     
 
@@ -1111,8 +1111,8 @@ def get_precision_screwdriver(thing, **kwargs):
             p3 = copy.deepcopy(kwargs)
             p3["type"] = "n"
             p3["shape"] = f"oobb_cube"
-            wid = 1
-            hei = 1
+            wid = 1.5
+            hei = 1.5
             dep = 5
             size = [wid, hei, dep]
             p3["size"] = size
@@ -1126,7 +1126,7 @@ def get_precision_screwdriver(thing, **kwargs):
             p3["rot"] = [0,0,45]     
             for i in range(repeats):
                 rot = [0,0,angle * i]
-                shift_x = rad + wid/2
+                shift_x = rad + wid/2 #- 0.25
                 shift = [shift_x,0,0]
                 rot_shift = [shift,rot]
                 
@@ -1199,7 +1199,7 @@ def get_precision_screwdriver(thing, **kwargs):
         pos1[1] += 0
         pos1[2] += depth_taper + depth_bottom_hex_small + depth_bottom_hex_big / 2 + lift_bottom_hex_big
         poss = []
-        repeats = 1        
+        repeats = 5        
         shift_down = 0
         for i in range(repeats):            
             pos11 = copy.deepcopy(pos1)
@@ -1212,37 +1212,14 @@ def get_precision_screwdriver(thing, **kwargs):
         p3["m"] = "#"        
         oobb_base.append_full(thing,**p3)
         
-        #add nut chute
-        p3 = copy.deepcopy(kwargs)
-        p3["type"] = "n"
-        p3["shape"] = f"oobb_nut"
-        p3["radius_name"] = "m3"
-        #p3["depth"] = 10
-        pos1 = copy.deepcopy(pos)
-        pos1[0] += 0
-        pos1[1] += 0
-        pos1[2] += depth_taper + depth_bottom_hex_small + depth_bottom_hex_big / 2 + lift_bottom_hex_big
-        poss = []
-        repeats = 30
-        shift_down = 3
-        for i in range(repeats):
-            pos11 = copy.deepcopy(pos1)            
-            pos11[2] += shift_down * i
-            poss.append(pos11)
-        p3["pos"] = poss
-        rot = [90,360/12,0]
-        p3["rot"] = rot
-        p3["m"] = "#"
-        p3["zz"] = "middle"
-        oobb_base.append_full(thing,**p3)
-
         #add hole for grub screw
         p3 = copy.deepcopy(kwargs)
         p3["type"] = "n"
         p3["shape"] = f"oobb_hole"
         dep = 12
         p3["depth"] = dep
-        p3["radius_name"] = "m3"
+        #p3["radius_name"] = "m3"
+        p3["radius"] = 1.6
         p3["include_nut"] = True
         p3["clearance"] = ["top", "bottom"]
         pos12 = copy.deepcopy(pos1)
@@ -1252,6 +1229,33 @@ def get_precision_screwdriver(thing, **kwargs):
         p3["rot"] = rot
         p3["m"] = "#"
         oobb_base.append_full(thing,**p3)
+
+        #add nut chute
+        if False:
+            p3 = copy.deepcopy(kwargs)
+            p3["type"] = "n"
+            p3["shape"] = f"oobb_nut"
+            p3["radius_name"] = "m3"
+            #p3["depth"] = 10
+            pos1 = copy.deepcopy(pos)
+            pos1[0] += 0
+            pos1[1] += 0
+            pos1[2] += depth_taper + depth_bottom_hex_small + depth_bottom_hex_big / 2 + lift_bottom_hex_big
+            poss = []
+            repeats = 30
+            shift_down = 3
+            for i in range(repeats):
+                pos11 = copy.deepcopy(pos1)            
+                pos11[2] += shift_down * i
+                poss.append(pos11)
+            p3["pos"] = poss
+            rot = [90,0,0]
+            p3["rot"] = rot
+            p3["m"] = "#"
+            p3["zz"] = "middle"
+            oobb_base.append_full(thing,**p3)
+
+            
 
     #add orings
     if True:
@@ -1281,7 +1285,7 @@ def get_precision_screwdriver(thing, **kwargs):
     if True:
         diameter_flute_tube = 5
         diameter_flute_ring = 150
-        center_gap = 7
+        center_gap = 6.5
         p3 = copy.deepcopy(kwargs)
         p3["type"] = "n"
         p3["shape"] = f"oring"
