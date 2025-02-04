@@ -395,11 +395,13 @@ def get_precision_screwdriver_test_nut_drop(thing, **kwargs):
         #p3["depth"] = 10
         p3["radius_name"] = "m6"
         p3["overhang"] = True
+        extra_clearance = -0.25
+        p3["extra_clearance"] = extra_clearance
         p3["m"] = "#"
         pos1 = copy.deepcopy(pos)
         pos1[0] += 0
         pos1[1] += 0
-        pos1[2] += height_driver
+        pos1[2] += height_driver - extra_clearance
         poss = []
         poss.append(pos1)
         p3["pos"] = poss
@@ -417,7 +419,7 @@ def get_precision_screwdriver_test_nut_drop(thing, **kwargs):
         pos1 = copy.deepcopy(pos)
         pos1[0] += 0
         pos1[1] += 0
-        pos1[2] += height_driver - depth_nut_ledge
+        pos1[2] += height_driver - depth_nut_ledge - extra_clearance*2
         poss = []
         poss.append(pos1)
         p3["pos"] = poss
