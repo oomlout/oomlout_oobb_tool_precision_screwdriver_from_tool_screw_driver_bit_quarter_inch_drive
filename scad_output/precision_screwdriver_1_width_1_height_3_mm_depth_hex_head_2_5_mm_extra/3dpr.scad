@@ -25,7 +25,7 @@ difference() {
 		}
 	}
 	union() {
-		translate(v = [0, 0, 64]) {
+		translate(v = [0, 0, 59]) {
 			rotate(a = [0, 0, 0]) {
 				difference() {
 					union() {
@@ -100,6 +100,18 @@ difference() {
 				difference() {
 					union() {
 						#linear_extrude(height = 3.2500000000) {
+							polygon(points = [[3.4620000000, 0.0000000000], [1.7310000000, 2.9981799479], [-1.7310000000, 2.9981799479], [-3.4620000000, 0.0000000000], [-1.7310000000, -2.9981799479], [1.7310000000, -2.9981799479]]);
+						}
+					}
+					union();
+				}
+			}
+		}
+		translate(v = [0, 0, 54.5000000000]) {
+			rotate(a = [90, 30.0000000000, 0]) {
+				difference() {
+					union() {
+						#linear_extrude(height = 5.7555500000) {
 							polygon(points = [[3.4620000000, 0.0000000000], [1.7310000000, 2.9981799479], [-1.7310000000, 2.9981799479], [-3.4620000000, 0.0000000000], [-1.7310000000, -2.9981799479], [1.7310000000, -2.9981799479]]);
 						}
 					}
@@ -433,7 +445,7 @@ difference() {
 		}
 		#translate(v = [0, 0, 54.5000000000]) {
 			rotate(a = [90, 0, 0]) {
-				cylinder(h = 12, r = 1.6000000000);
+				cylinder(h = 12, r = 0.8000000000);
 			}
 		}
 		translate(v = [0, 0, 33.1000000000]) {
@@ -480,7 +492,7 @@ difference() {
 		}
 		rotate(a = [0, 0, 0.0000000000]) {
 			translate(v = [0, 0, 0]) {
-				translate(v = [80.7500000000, 0, 29.5000000000]) {
+				translate(v = [81.0000000000, 0, 29.5000000000]) {
 					rotate(a = [90, 0, 0]) {
 						rotate_extrude(angle = 360) {
 							translate(v = [76.2500000000, 0, 0]) {
@@ -493,7 +505,7 @@ difference() {
 		}
 		rotate(a = [0, 0, 60.0000000000]) {
 			translate(v = [0, 0, 0]) {
-				translate(v = [80.7500000000, 0, 29.5000000000]) {
+				translate(v = [81.0000000000, 0, 29.5000000000]) {
 					rotate(a = [90, 0, 0]) {
 						rotate_extrude(angle = 360) {
 							translate(v = [76.2500000000, 0, 0]) {
@@ -506,7 +518,7 @@ difference() {
 		}
 		rotate(a = [0, 0, 120.0000000000]) {
 			translate(v = [0, 0, 0]) {
-				translate(v = [80.7500000000, 0, 29.5000000000]) {
+				translate(v = [81.0000000000, 0, 29.5000000000]) {
 					rotate(a = [90, 0, 0]) {
 						rotate_extrude(angle = 360) {
 							translate(v = [76.2500000000, 0, 0]) {
@@ -519,7 +531,7 @@ difference() {
 		}
 		rotate(a = [0, 0, 180.0000000000]) {
 			translate(v = [0, 0, 0]) {
-				translate(v = [80.7500000000, 0, 29.5000000000]) {
+				translate(v = [81.0000000000, 0, 29.5000000000]) {
 					rotate(a = [90, 0, 0]) {
 						rotate_extrude(angle = 360) {
 							translate(v = [76.2500000000, 0, 0]) {
@@ -532,7 +544,7 @@ difference() {
 		}
 		rotate(a = [0, 0, 240.0000000000]) {
 			translate(v = [0, 0, 0]) {
-				translate(v = [80.7500000000, 0, 29.5000000000]) {
+				translate(v = [81.0000000000, 0, 29.5000000000]) {
 					rotate(a = [90, 0, 0]) {
 						rotate_extrude(angle = 360) {
 							translate(v = [76.2500000000, 0, 0]) {
@@ -545,7 +557,7 @@ difference() {
 		}
 		rotate(a = [0, 0, 300.0000000000]) {
 			translate(v = [0, 0, 0]) {
-				translate(v = [80.7500000000, 0, 29.5000000000]) {
+				translate(v = [81.0000000000, 0, 29.5000000000]) {
 					rotate(a = [90, 0, 0]) {
 						rotate_extrude(angle = 360) {
 							translate(v = [76.2500000000, 0, 0]) {

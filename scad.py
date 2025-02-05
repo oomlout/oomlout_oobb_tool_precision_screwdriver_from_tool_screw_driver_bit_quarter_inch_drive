@@ -893,7 +893,7 @@ def get_precision_screwdriver(thing, **kwargs):
     depth_bottom_hex_big = 9
 
     fudge_factor_bit_lift_extra = 27 
-    fudge_fudge_factor_bit_lift_extra = fudge_factor_bit_lift_extra - 20
+    fudge_fudge_factor_bit_lift_extra = fudge_factor_bit_lift_extra - 25
 
 
     lift_bottom_hex_big = 14 + fudge_factor_bit_lift_extra #18
@@ -1201,17 +1201,28 @@ def get_precision_screwdriver(thing, **kwargs):
         poss = []
         repeats = 5        
         shift_down = 0
-        for i in range(repeats):            
-            pos11 = copy.deepcopy(pos1)
-            shift_down = i * 2.75
-            pos11[2] += shift_down
-            poss.append(pos11)
         p3["pos"] = poss
         rot = [90,360/12,0]
         p3["rot"] = rot
         p3["m"] = "#"        
-        oobb_base.append_full(thing,**p3)
+        for i in range(repeats):            
+            p4 = copy.deepcopy(p3)
+            pos11 = copy.deepcopy(pos1)
+            shift_down = i * 2.75
+            pos11[2] += shift_down
+            p4["pos"] = pos11
+            oobb_base.append_full(thing,**p4)
         
+        p4 = copy.deepcopy(p3)
+        pos11 = copy.deepcopy(pos1)
+        p4["pos"] = pos11
+        p4["depth"] = radius_bottom_hex_big - nut_wall_thickness
+        oobb_base.append_full(thing,**p4)
+
+        
+
+
+
         #add hole for grub screw
         p3 = copy.deepcopy(kwargs)
         p3["type"] = "n"
@@ -1219,7 +1230,7 @@ def get_precision_screwdriver(thing, **kwargs):
         dep = 12
         p3["depth"] = dep
         #p3["radius_name"] = "m3"
-        p3["radius"] = 1.6
+        p3["radius"] = 1.6/2
         p3["include_nut"] = True
         p3["clearance"] = ["top", "bottom"]
         pos12 = copy.deepcopy(pos1)
@@ -1285,7 +1296,7 @@ def get_precision_screwdriver(thing, **kwargs):
     if True:
         diameter_flute_tube = 5
         diameter_flute_ring = 150
-        center_gap = 6.5
+        center_gap = 7
         p3 = copy.deepcopy(kwargs)
         p3["type"] = "n"
         p3["shape"] = f"oring"
