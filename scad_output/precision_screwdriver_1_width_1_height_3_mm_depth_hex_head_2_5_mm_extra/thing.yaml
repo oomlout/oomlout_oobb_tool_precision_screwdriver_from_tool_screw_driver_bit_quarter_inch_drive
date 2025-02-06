@@ -42,6 +42,221 @@ thing:
   classification: oobb
   color: ''
   components:
+  - - depth: 3
+      extra: hex_head_2_5_mm
+      h: 3
+      height: 1
+      inclusion: laser
+      pos: &id001
+      - 0
+      - 0
+      - 0.0
+      r1: 2.125
+      r2: 4.7735
+      rot: &id002
+      - 0
+      - 0
+      - 0
+      shape: cylinder
+      type: positive
+      width: 1
+    - depth: 3
+      extra: hex_head_2_5_mm
+      h: 3
+      height: 1
+      inclusion: 3dpr
+      pos: *id001
+      r1: 2.125
+      r2: 4.7735
+      rot: *id002
+      shape: cylinder
+      type: positive
+      width: 1
+    - depth: 3
+      extra: hex_head_2_5_mm
+      h: 3
+      height: 1
+      inclusion: 'true'
+      pos: *id001
+      r1: 2.125
+      r2: 4.7735
+      rot: *id002
+      shape: cylinder
+      type: positive
+      width: 1
+  - - depth: 56
+      extra: hex_head_2_5_mm
+      h: 56
+      height: 1
+      inclusion: laser
+      pos: &id003
+      - 0
+      - 0
+      - 9.0
+      r: 5.0
+      radius: 5.0
+      rot: &id004
+      - 0
+      - 0
+      - 0
+      shape: cylinder
+      type: positive
+      width: 1
+    - depth: 56
+      extra: hex_head_2_5_mm
+      h: 56
+      height: 1
+      inclusion: 3dpr
+      pos: *id003
+      r: 5.0
+      rot: *id004
+      shape: cylinder
+      type: positive
+      width: 1
+    - depth: 56
+      extra: hex_head_2_5_mm
+      h: 56
+      height: 1
+      inclusion: 'true'
+      pos: *id003
+      r: 5.0
+      radius: 5.0
+      rot: *id004
+      shape: cylinder
+      type: positive
+      width: 1
+  - - depth: 30
+      extra: hex_head_2_5_mm
+      h: 30
+      height: 1
+      inclusion: laser
+      pos: &id005
+      - 0
+      - 0
+      - 60.0
+      r1: 5.0
+      r2: 9.0
+      shape: cylinder
+      type: positive
+      width: 1
+    - depth: 30
+      extra: hex_head_2_5_mm
+      h: 30
+      height: 1
+      inclusion: 3dpr
+      pos: *id005
+      r1: 5.0
+      r2: 9.0
+      shape: cylinder
+      type: positive
+      width: 1
+    - depth: 30
+      extra: hex_head_2_5_mm
+      h: 30
+      height: 1
+      inclusion: 'true'
+      pos: *id005
+      r1: 5.0
+      r2: 9.0
+      shape: cylinder
+      type: positive
+      width: 1
+  - - depth: 2.5
+      extra: hex_head_2_5_mm
+      h: 2.5
+      height: 1
+      inclusion: laser
+      pos: &id006
+      - 0
+      - 0
+      - 88.75
+      r: 9.0
+      radius: 9.0
+      rot: &id007
+      - 0
+      - 0
+      - 0
+      shape: cylinder
+      type: positive
+      width: 1
+    - depth: 2.5
+      extra: hex_head_2_5_mm
+      h: 2.5
+      height: 1
+      inclusion: 3dpr
+      pos: *id006
+      r: 9.0
+      rot: *id007
+      shape: cylinder
+      type: positive
+      width: 1
+    - depth: 2.5
+      extra: hex_head_2_5_mm
+      h: 2.5
+      height: 1
+      inclusion: 'true'
+      pos: *id006
+      r: 9.0
+      radius: 9.0
+      rot: *id007
+      shape: cylinder
+      type: positive
+      width: 1
+  - - depth: 5
+      extra: hex_head_2_5_mm
+      height: 1
+      id: 4.0
+      pos:
+      - 0
+      - 0
+      - 90
+      shape: oring
+      type: positive
+      width: 1
+  - - depth: 5
+      extra: hex_head_2_5_mm
+      h: 5
+      height: 1
+      inclusion: laser
+      m: '#'
+      pos: &id008
+      - 0
+      - 0
+      - 87.5
+      r: 6.5
+      radius: 6.5
+      rot: &id009
+      - 0
+      - 0
+      - 0
+      shape: cylinder
+      type: positive
+      width: 1
+    - depth: 5
+      extra: hex_head_2_5_mm
+      h: 5
+      height: 1
+      inclusion: 3dpr
+      m: '#'
+      pos: *id008
+      r: 6.5
+      rot: *id009
+      shape: cylinder
+      type: positive
+      width: 1
+    - depth: 5
+      extra: hex_head_2_5_mm
+      h: 5
+      height: 1
+      inclusion: 'true'
+      m: '#'
+      pos: *id008
+      r: 6.5
+      radius: 6.5
+      rot: *id009
+      shape: cylinder
+      type: positive
+      width: 1
   - - - extra: hex_head_2_5_mm
         height: 1
         pos:
@@ -906,6 +1121,28 @@ thing:
         - 5
         type: negative
         width: 1
+  - - extra: hex_head_2_5_mm
+      height: 6
+      pos:
+      - 0
+      - 0
+      - 3
+      r: 5.7735
+      shape: polyg
+      sides: 6
+      type: positive
+      width: 1
+  - - extra: hex_head_2_5_mm
+      height: 9
+      pos:
+      - 0
+      - 0
+      - 50
+      r: 7.50555
+      shape: polyg
+      sides: 6
+      type: positive
+      width: 1
   - - objects:
       - - - clearance: 0.2
             extra: hex_head_2_5_mm
@@ -941,7 +1178,7 @@ thing:
             height: 1
             inclusion: laser
             m: '#'
-            pos: &id001
+            pos: &id010
             - 0
             - 0
             - -121.8
@@ -957,7 +1194,7 @@ thing:
             height: 1
             inclusion: 3dpr
             m: '#'
-            pos: *id001
+            pos: *id010
             r: 2.1
             shape: cylinder
             type: positive
@@ -969,7 +1206,7 @@ thing:
             height: 1
             inclusion: 'true'
             m: '#'
-            pos: *id001
+            pos: *id010
             r: 2.1
             radius: 2.1
             shape: cylinder
@@ -1251,9 +1488,9 @@ thing:
       type: rotation
       typetype: n
   - - objects:
-      - depth: 5.75555
+      - depth: 5.00555
         extra: hex_head_2_5_mm
-        height: 5.75555
+        height: 5.00555
         inclusion: laser
         m: '#'
         pos:
@@ -1265,9 +1502,9 @@ thing:
         sides: 6
         type: positive
         width: 1
-      - depth: 5.75555
+      - depth: 5.00555
         extra: hex_head_2_5_mm
-        height: 5.75555
+        height: 5.00555
         inclusion: 3dpr
         m: '#'
         pos:
@@ -1279,9 +1516,9 @@ thing:
         sides: 6
         type: positive
         width: 1
-      - depth: 5.75555
+      - depth: 5.00555
         extra: hex_head_2_5_mm
-        height: 5.75555
+        height: 5.00555
         inclusion: 'true'
         m: '#'
         pos:
@@ -1303,7 +1540,7 @@ thing:
       - 0
       type: rotation
       typetype: n
-  - - clearance: &id002
+  - - clearance: &id011
       - top
       - bottom
       depth: 12
@@ -1312,44 +1549,110 @@ thing:
       height: 1
       inclusion: laser
       m: '#'
-      pos: &id003
+      pos: &id012
       - 0
       - 0
       - 54.5
       r: 0.8
       radius: 0.8
-      rot: &id004
+      rot: &id013
       - 90
       - 0
       - 0
       shape: cylinder
       type: negative
       width: 1
-    - clearance: *id002
+    - clearance: *id011
       depth: 12
       extra: hex_head_2_5_mm
       h: 12
       height: 1
       inclusion: 3dpr
       m: '#'
-      pos: *id003
+      pos: *id012
       r: 0.8
-      rot: *id004
+      rot: *id013
       shape: cylinder
       type: negative
       width: 1
-    - clearance: *id002
+    - clearance: *id011
       depth: 12
       extra: hex_head_2_5_mm
       h: 12
       height: 1
       inclusion: 'true'
       m: '#'
-      pos: *id003
+      pos: *id012
       r: 0.8
       radius: 0.8
-      rot: *id004
+      rot: *id013
       shape: cylinder
+      type: negative
+      width: 1
+  - - depth: 150
+      extra: hex_head_2_5_mm
+      height: 1
+      id: 4.0
+      pos:
+      - 0
+      - 0
+      - 33.1
+      shape: oring
+      type: negative
+      width: 1
+  - - depth: 150
+      extra: hex_head_2_5_mm
+      height: 1
+      id: 4.0
+      pos:
+      - 0
+      - 0
+      - 31.3
+      shape: oring
+      type: negative
+      width: 1
+  - - depth: 150
+      extra: hex_head_2_5_mm
+      height: 1
+      id: 4.0
+      pos:
+      - 0
+      - 0
+      - 27.7
+      shape: oring
+      type: negative
+      width: 1
+  - - depth: 150
+      extra: hex_head_2_5_mm
+      height: 1
+      id: 4.0
+      pos:
+      - 0
+      - 0
+      - 25.9
+      shape: oring
+      type: negative
+      width: 1
+  - - depth: 150
+      extra: hex_head_2_5_mm
+      height: 1
+      id: 5.5
+      pos:
+      - 0
+      - 0
+      - 69.25
+      shape: oring
+      type: negative
+      width: 1
+  - - depth: 16
+      extra: hex_head_2_5_mm
+      height: 1
+      id: 7.0
+      pos:
+      - 0
+      - 0
+      - 79.5
+      shape: oring
       type: negative
       width: 1
   - - depth: 2.5
@@ -1485,6 +1788,195 @@ thing:
       type: negative
       width: 1
   components_objects:
+  - depth: 3
+    extra: hex_head_2_5_mm
+    filter: ''
+    height: 1
+    modes:
+    - 3dpr
+    navigation: false
+    oomp_classification: project
+    oomp_color: oomlout_oobb_tool_precision_screwdriver
+    oomp_description_extra: ''
+    oomp_description_main: ''
+    oomp_manufacturer: ''
+    oomp_mode: project
+    oomp_part_number: ''
+    oomp_run: false
+    oomp_size: oomlout
+    oomp_type: github
+    overwrite: true
+    pos:
+    - 0
+    - 0
+    - 0
+    r1: 2.125
+    r2: 4.7735
+    rot:
+    - 0
+    - 0
+    - 0
+    save_type: none
+    shape: oobb_cylinder
+    thickness: 3
+    type: p
+    width: 1
+    zz: bottom
+  - depth: 56
+    extra: hex_head_2_5_mm
+    filter: ''
+    height: 1
+    modes:
+    - 3dpr
+    navigation: false
+    oomp_classification: project
+    oomp_color: oomlout_oobb_tool_precision_screwdriver
+    oomp_description_extra: ''
+    oomp_description_main: ''
+    oomp_manufacturer: ''
+    oomp_mode: project
+    oomp_part_number: ''
+    oomp_run: false
+    oomp_size: oomlout
+    oomp_type: github
+    overwrite: true
+    pos:
+    - 0
+    - 0
+    - 9
+    radius: 5.0
+    rot:
+    - 0
+    - 0
+    - 0
+    save_type: none
+    shape: oobb_cylinder
+    thickness: 3
+    type: p
+    width: 1
+    zz: bottom
+  - depth: 30
+    extra: hex_head_2_5_mm
+    filter: ''
+    height: 1
+    modes:
+    - 3dpr
+    navigation: false
+    oomp_classification: project
+    oomp_color: oomlout_oobb_tool_precision_screwdriver
+    oomp_description_extra: ''
+    oomp_description_main: ''
+    oomp_manufacturer: ''
+    oomp_mode: project
+    oomp_part_number: ''
+    oomp_run: false
+    oomp_size: oomlout
+    oomp_type: github
+    overwrite: true
+    pos:
+    - 0
+    - 0
+    - 75.0
+    r1: 5.0
+    r2: 9.0
+    save_type: none
+    shape: oobb_cylinder
+    thickness: 3
+    type: p
+    width: 1
+  - depth: 2.5
+    extra: hex_head_2_5_mm
+    filter: ''
+    height: 1
+    modes:
+    - 3dpr
+    navigation: false
+    oomp_classification: project
+    oomp_color: oomlout_oobb_tool_precision_screwdriver
+    oomp_description_extra: ''
+    oomp_description_main: ''
+    oomp_manufacturer: ''
+    oomp_mode: project
+    oomp_part_number: ''
+    oomp_run: false
+    oomp_size: oomlout
+    oomp_type: github
+    overwrite: true
+    pos:
+    - 0
+    - 0
+    - 90
+    radius: 9.0
+    rot:
+    - 0
+    - 0
+    - 0
+    save_type: none
+    shape: oobb_cylinder
+    thickness: 3
+    type: p
+    width: 1
+  - depth: 5
+    extra: hex_head_2_5_mm
+    filter: ''
+    height: 1
+    id: 4.0
+    modes:
+    - 3dpr
+    navigation: false
+    oomp_classification: project
+    oomp_color: oomlout_oobb_tool_precision_screwdriver
+    oomp_description_extra: ''
+    oomp_description_main: ''
+    oomp_manufacturer: ''
+    oomp_mode: project
+    oomp_part_number: ''
+    oomp_run: false
+    oomp_size: oomlout
+    oomp_type: github
+    overwrite: true
+    pos:
+    - 0
+    - 0
+    - 90
+    save_type: none
+    shape: oring
+    thickness: 3
+    type: positive
+    width: 1
+  - depth: 5
+    extra: hex_head_2_5_mm
+    filter: ''
+    height: 1
+    m: '#'
+    modes:
+    - 3dpr
+    navigation: false
+    oomp_classification: project
+    oomp_color: oomlout_oobb_tool_precision_screwdriver
+    oomp_description_extra: ''
+    oomp_description_main: ''
+    oomp_manufacturer: ''
+    oomp_mode: project
+    oomp_part_number: ''
+    oomp_run: false
+    oomp_size: oomlout
+    oomp_type: github
+    overwrite: true
+    pos:
+    - 0
+    - 0
+    - 90
+    radius: 6.5
+    rot:
+    - 0
+    - 0
+    - 0
+    save_type: none
+    shape: oobb_cylinder
+    thickness: 3
+    type: positive
+    width: 1
   - extra: hex_head_2_5_mm
     filter: ''
     height: 1
@@ -2997,6 +3489,62 @@ thing:
     type: n
     width: 1
     zz: middle
+  - extra: hex_head_2_5_mm
+    filter: ''
+    height: 6
+    modes:
+    - 3dpr
+    navigation: false
+    oomp_classification: project
+    oomp_color: oomlout_oobb_tool_precision_screwdriver
+    oomp_description_extra: ''
+    oomp_description_main: ''
+    oomp_manufacturer: ''
+    oomp_mode: project
+    oomp_part_number: ''
+    oomp_run: false
+    oomp_size: oomlout
+    oomp_type: github
+    overwrite: true
+    pos:
+    - 0
+    - 0
+    - 3
+    radius: 5.7735
+    save_type: none
+    shape: polyg
+    sides: 6
+    thickness: 3
+    type: p
+    width: 1
+  - extra: hex_head_2_5_mm
+    filter: ''
+    height: 9
+    modes:
+    - 3dpr
+    navigation: false
+    oomp_classification: project
+    oomp_color: oomlout_oobb_tool_precision_screwdriver
+    oomp_description_extra: ''
+    oomp_description_main: ''
+    oomp_manufacturer: ''
+    oomp_mode: project
+    oomp_part_number: ''
+    oomp_run: false
+    oomp_size: oomlout
+    oomp_type: github
+    overwrite: true
+    pos:
+    - 0
+    - 0
+    - 50
+    radius: 7.50555
+    save_type: none
+    shape: polyg
+    sides: 6
+    thickness: 3
+    type: p
+    width: 1
   - depth: 3.25
     extra: hex_head_2_5_mm
     filter: ''
@@ -3162,7 +3710,7 @@ thing:
     thickness: 3
     type: n
     width: 1
-  - depth: 5.75555
+  - depth: 5.00555
     extra: hex_head_2_5_mm
     filter: ''
     height: 1
@@ -3229,6 +3777,174 @@ thing:
     - 0
     save_type: none
     shape: oobb_hole
+    thickness: 3
+    type: n
+    width: 1
+  - depth: 150
+    extra: hex_head_2_5_mm
+    filter: ''
+    height: 1
+    id: 4.0
+    modes:
+    - 3dpr
+    navigation: false
+    oomp_classification: project
+    oomp_color: oomlout_oobb_tool_precision_screwdriver
+    oomp_description_extra: ''
+    oomp_description_main: ''
+    oomp_manufacturer: ''
+    oomp_mode: project
+    oomp_part_number: ''
+    oomp_run: false
+    oomp_size: oomlout
+    oomp_type: github
+    overwrite: true
+    pos:
+    - 0
+    - 0
+    - 33.1
+    save_type: none
+    shape: oring
+    thickness: 3
+    type: n
+    width: 1
+  - depth: 150
+    extra: hex_head_2_5_mm
+    filter: ''
+    height: 1
+    id: 4.0
+    modes:
+    - 3dpr
+    navigation: false
+    oomp_classification: project
+    oomp_color: oomlout_oobb_tool_precision_screwdriver
+    oomp_description_extra: ''
+    oomp_description_main: ''
+    oomp_manufacturer: ''
+    oomp_mode: project
+    oomp_part_number: ''
+    oomp_run: false
+    oomp_size: oomlout
+    oomp_type: github
+    overwrite: true
+    pos:
+    - 0
+    - 0
+    - 31.3
+    save_type: none
+    shape: oring
+    thickness: 3
+    type: n
+    width: 1
+  - depth: 150
+    extra: hex_head_2_5_mm
+    filter: ''
+    height: 1
+    id: 4.0
+    modes:
+    - 3dpr
+    navigation: false
+    oomp_classification: project
+    oomp_color: oomlout_oobb_tool_precision_screwdriver
+    oomp_description_extra: ''
+    oomp_description_main: ''
+    oomp_manufacturer: ''
+    oomp_mode: project
+    oomp_part_number: ''
+    oomp_run: false
+    oomp_size: oomlout
+    oomp_type: github
+    overwrite: true
+    pos:
+    - 0
+    - 0
+    - 27.7
+    save_type: none
+    shape: oring
+    thickness: 3
+    type: n
+    width: 1
+  - depth: 150
+    extra: hex_head_2_5_mm
+    filter: ''
+    height: 1
+    id: 4.0
+    modes:
+    - 3dpr
+    navigation: false
+    oomp_classification: project
+    oomp_color: oomlout_oobb_tool_precision_screwdriver
+    oomp_description_extra: ''
+    oomp_description_main: ''
+    oomp_manufacturer: ''
+    oomp_mode: project
+    oomp_part_number: ''
+    oomp_run: false
+    oomp_size: oomlout
+    oomp_type: github
+    overwrite: true
+    pos:
+    - 0
+    - 0
+    - 25.9
+    save_type: none
+    shape: oring
+    thickness: 3
+    type: n
+    width: 1
+  - depth: 150
+    extra: hex_head_2_5_mm
+    filter: ''
+    height: 1
+    id: 5.5
+    modes:
+    - 3dpr
+    navigation: false
+    oomp_classification: project
+    oomp_color: oomlout_oobb_tool_precision_screwdriver
+    oomp_description_extra: ''
+    oomp_description_main: ''
+    oomp_manufacturer: ''
+    oomp_mode: project
+    oomp_part_number: ''
+    oomp_run: false
+    oomp_size: oomlout
+    oomp_type: github
+    overwrite: true
+    pos:
+    - 0
+    - 0
+    - 69.25
+    save_type: none
+    shape: oring
+    thickness: 3
+    type: n
+    width: 1
+  - depth: 16
+    extra: hex_head_2_5_mm
+    filter: ''
+    height: 1
+    id: 7.0
+    modes:
+    - 3dpr
+    navigation: false
+    oomp_classification: project
+    oomp_color: oomlout_oobb_tool_precision_screwdriver
+    oomp_description_extra: ''
+    oomp_description_main: ''
+    oomp_manufacturer: ''
+    oomp_mode: project
+    oomp_part_number: ''
+    oomp_run: false
+    oomp_size: oomlout
+    oomp_type: github
+    overwrite: true
+    pos:
+    - 0
+    - 0
+    - 79.5
+    save_type: none
+    shape: oring
     thickness: 3
     type: n
     width: 1
@@ -3467,6 +4183,12 @@ thing:
     type: n
     width: 1
   components_string:
+  - oobb_cylinder_shape_p_type_3_depth_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_4.7735_r2_2.125_r1_bottom_zz_0_0_0_rot
+  - oobb_cylinder_shape_p_type_56_depth_0_0_9_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_5.0_radius_0_0_0_rot_bottom_zz
+  - oobb_cylinder_shape_p_type_30_depth_0_0_75.0_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_9.0_r2_5.0_r1
+  - oobb_cylinder_shape_p_type_2.5_depth_0_0_90_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_9.0_radius_0_0_0_rot
+  - oring_shape_positive_type_5_depth_0_0_90_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_4.0_id
+  - oobb_cylinder_shape_positive_type_5_depth_0_0_90_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_6.5_radius_0_0_0_rot
   - oobb_cube_shape_n_type_0_0_92.5_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_1.5_1.5_5_size_middle_zz_0_0_45_rot_9.75_0_0_0_0_0.0_rot_shift
   - oobb_cube_shape_n_type_0_0_92.5_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_1.5_1.5_5_size_middle_zz_0_0_45_rot_9.75_0_0_0_0_10.0_rot_shift
   - oobb_cube_shape_n_type_0_0_92.5_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_1.5_1.5_5_size_middle_zz_0_0_45_rot_9.75_0_0_0_0_20.0_rot_shift
@@ -3503,13 +4225,21 @@ thing:
   - oobb_cube_shape_n_type_0_0_92.5_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_1.5_1.5_5_size_middle_zz_0_0_45_rot_9.75_0_0_0_0_330.0_rot_shift
   - oobb_cube_shape_n_type_0_0_92.5_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_1.5_1.5_5_size_middle_zz_0_0_45_rot_9.75_0_0_0_0_340.0_rot_shift
   - oobb_cube_shape_n_type_0_0_92.5_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_1.5_1.5_5_size_middle_zz_0_0_45_rot_9.75_0_0_0_0_350.0_rot_shift
+  - polyg_shape_p_type_0_0_3_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_6_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_6_sides_5.7735_radius
+  - polyg_shape_p_type_0_0_50_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_9_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_6_sides_7.50555_radius
   - oobb_nut_shape_n_type_m3_radius_name_3.25_depth_0_0_54.5_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_90_30.0_0_rot
   - oobb_nut_shape_n_type_m3_radius_name_3.25_depth_0_0_57.25_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_90_30.0_0_rot
   - oobb_nut_shape_n_type_m3_radius_name_3.25_depth_0_0_60.0_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_90_30.0_0_rot
   - oobb_nut_shape_n_type_m3_radius_name_3.25_depth_0_0_62.75_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_90_30.0_0_rot
   - oobb_nut_shape_n_type_m3_radius_name_3.25_depth_0_0_65.5_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_90_30.0_0_rot
-  - oobb_nut_shape_n_type_m3_radius_name_5.75555_depth_0_0_54.5_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_90_30.0_0_rot
+  - oobb_nut_shape_n_type_m3_radius_name_5.00555_depth_0_0_54.5_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_90_30.0_0_rot
   - oobb_hole_shape_n_type_12_depth_0_0_54.5_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_0.8_radius_true_include_nut_'top'_'bottom'_clearance_90_0_0_rot
+  - oring_shape_n_type_150_depth_0_0_33.1_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_4.0_id
+  - oring_shape_n_type_150_depth_0_0_31.3_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_4.0_id
+  - oring_shape_n_type_150_depth_0_0_27.7_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_4.0_id
+  - oring_shape_n_type_150_depth_0_0_25.9_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_4.0_id
+  - oring_shape_n_type_150_depth_0_0_69.25_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_5.5_id
+  - oring_shape_n_type_16_depth_0_0_79.5_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_7.0_id
   - oring_shape_n_type_2.5_depth_81.0_0_29.5_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_75.0_id_90_0_0_rot_0_0_0_0_0_0.0_rot_shift
   - oring_shape_n_type_2.5_depth_81.0_0_29.5_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_75.0_id_90_0_0_rot_0_0_0_0_0_60.0_rot_shift
   - oring_shape_n_type_2.5_depth_81.0_0_29.5_pos_none_save_type_false_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_false_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_oobb_tool_precision_screwdriver_oomp_color_hex_head_2_5_mm_extra_75.0_id_90_0_0_rot_0_0_0_0_0_120.0_rot_shift
